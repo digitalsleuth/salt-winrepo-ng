@@ -8,8 +8,8 @@ autopsy:
     installer: 'https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.19.2/autopsy-4.19.2-32bit.msi'
     uninstaller: 'https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.19.2/autopsy-4.19.2-32bit.msi'
     {% endif %}
-    install_flags: '/qn /norestart'
-    uninstall_flags: '/qn /norestart'
+    install_flags: '/quiet /norestart'
+    uninstall_flags: '/quiet /norestart'
     msiexec: True
     locale: en_US
     reboot: False
