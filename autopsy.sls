@@ -9,3 +9,4 @@ autopsy:
     msiexec: True
     locale: en_US
     reboot: False
+    source_hash: sha256=854BB89CFC12E3CFE844A8BFB40E6A876FBF55732088219BACE4578D7FD0C0FE
