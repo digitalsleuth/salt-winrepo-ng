@@ -21,5 +21,4 @@ if not "%~1"=="" (
 Set "CurDir=%cd%"
 
 :: Launch the powershell script
-echo "LAUNCHING!"
 powershell -ep bypass \".\%CurDir%\install.ps1 -norestart -ignore_space -password %password%\"
