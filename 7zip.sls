@@ -1,6 +1,6 @@
 # both 32-bit (x86) AND a 64-bit (AMD64) installer available
-{% set versions = {'19':['00'], '18':['06', '05', '03', '01'], '16':['04', '03', '02', '00']} %}
-{% set source_path = 'https://d.7-zip.org/a/' %}
+{% set versions = {'21':['06'],'19':['00'], '18':['06', '05', '03', '01'], '16':['04', '03', '02', '00']} %}
+{% set source_path = 'https://d2.7-zip.org/a/' %}
 
 7zip:
 {% for major, subversions in versions.items() %}
