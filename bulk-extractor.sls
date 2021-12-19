@@ -4,12 +4,12 @@
 {% else %}
     {% set PROGRAM_FILES = "%ProgramFiles%" %}
 {% endif %}
-bulk_extractor:
+bulk-extractor:
   {% for version in '1.5.5', '1.5.1', '1.5.0' %}
   '{{ version }}':
     full_name: 'Bulk Extractor {{ version }}'
     installer: 'https://digitalcorpora.org/downloads/bulk_extractor/bulk_extractor-{{ version }}-windowsinstaller.exe'
-    install_flags: ' /S /norestart'
+    install_flags: ' /S'
     uninstaller: '{{ PROGRAM_FILES }}\Bulk Extractor {{ version }}\uninstall.exe'
     uninstall_flags: '/S'
     msiexec: False
