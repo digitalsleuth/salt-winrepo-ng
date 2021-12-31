@@ -40,7 +40,7 @@ python3_x86:
   '{{ RAW_VER }}':
     full_name: 'Python {{ VER }} (32-bit)'
     installer: 'https://www.python.org/ftp/python/{{ VER }}/python-{{ VER }}.exe'
-    install_flags: '/quiet InstallAllUsers=1'
+    install_flags: '/quiet InstallAllUsers=1 PrependPath=1'
     uninstaller: 'https://www.python.org/ftp/python/{{ VER }}/python-{{ VER }}.exe'
     uninstall_flags: '/quiet /uninstall'
     msiexec: False

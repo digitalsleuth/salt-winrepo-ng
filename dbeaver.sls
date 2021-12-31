@@ -1,5 +1,6 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['21.0.2', 
+{% set versions = ['21.3.2',
+                   '21.0.2', 
                    '21.0.0', 
                    '7.3.5', 
                    '7.3.4', 
@@ -19,7 +20,7 @@
                    '7.1.2', 
                    '7.1.1', 
                    '7.1.0'] %}
-#
+
 dbeaver:
   {% for version in versions %}
   '{{ version }}':
@@ -32,4 +33,4 @@ dbeaver:
     locale: en_US
     reboot: False
   {% endfor %}
-#
+
