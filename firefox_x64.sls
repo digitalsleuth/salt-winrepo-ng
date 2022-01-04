@@ -19,7 +19,7 @@ firefox_x64:
     {% endif -%}
     full_name: 'Mozilla Firefox{{ display_version | default("") }} (x64 {{ lang }})'
     installer: 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/{{ version }}/win64/{{ lang }}/Firefox%20Setup%20{{ version }}.exe'
-    install_flags: '/S'
+    install_flags: '/S /DESKTOPSHORTCUT=FALSE'
     uninstaller: '%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe'
     uninstall_flags: '/S'
     msiexec: False

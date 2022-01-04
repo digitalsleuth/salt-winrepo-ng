@@ -4,7 +4,7 @@ kernel-pst-viewer:
   '20.3':
     full_name: 'Kernel Outlook PST Viewer ver 20.3'
     installer: 'https://www.nucleustechnologies.com/downloads/freekernelpstviewer.exe'
-    install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+    install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: '{{ PROGRAM_FILES }}\Kernel Outlook PST Viewer\unins000.exe'
     uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
     msiexec: False

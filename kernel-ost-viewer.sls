@@ -4,7 +4,7 @@ kernel-ost-viewer:
   '21.1':
     full_name: 'Kernel OST Viewer ver 21.1'
     installer: 'https://www.nucleustechnologies.com/downloads/freekernelostviewer.exe'
-    install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+    install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: '{{ PROGRAM_FILES }}\Kernel OST Viewer\unins000.exe'
     uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
     msiexec: False
