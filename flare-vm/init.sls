@@ -11,3 +11,5 @@ flare-vm:
     installer: 'salt://win/repo-ng/salt-winrepo-ng/flare-vm/install.cmd'
     install_flags: {{ password }}
     cache_dir: True
+    locale: en_US
+    reboot: False

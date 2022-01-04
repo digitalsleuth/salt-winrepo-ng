@@ -18,7 +18,7 @@ if not "%~1"=="" (
 )
 
 :: Get the current directory
-Set "CurDir=%cd%"
+Set "CurDir=%~dp0"
 
 :: Launch the powershell script
-powershell -ep bypass \".\%CurDir%\install.ps1 -norestart -ignore_space -password %password%\"
+powershell -nop -ep bypass -file "%CurDir%\install.ps1" -norestart -ignore_space -password %password%
