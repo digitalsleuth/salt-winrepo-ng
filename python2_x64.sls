@@ -6,7 +6,7 @@ python2_x64:
   '{{ full_version }}':
     full_name: 'Python {{ version }} (64-bit)'
     installer: 'https://www.python.org/ftp/python/{{ version }}/python-{{ version }}.amd64.msi'
-    install_flags: '/qn ALLUSERS=1 ADDLOCAL=Extensions /norestart'
+    install_flags: '/qn ALLUSERS=1 ADDLOCAL=Extensions,pip_feature /norestart'
     uninstaller: 'https://www.python.org/ftp/python/{{ version }}/python-{{ version }}.amd64.msi'
     uninstall_flags: '/qn /norestart'
     msiexec: True
