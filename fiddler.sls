@@ -4,10 +4,11 @@
 {% else %}
     {% set PROGRAM_FILES = "%ProgramFiles%" %}
 {% endif %}
+ 
 fiddler:
-  '5.0.20181.14850':
-    full_name:  'Fiddler'
-    installer: 'https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe'
+  '5.0.20211.51073':
+    full_name: 'Progress Telerik Fiddler Classic'
+    installer: https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe
     install_flags: '/S /D={{ PROGRAM_FILES }}\Fiddler'
     uninstaller: '{{ PROGRAM_FILES }}\Fiddler\uninst.exe'
     uninstall_flags: '/S'
