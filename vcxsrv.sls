@@ -3,7 +3,7 @@
 vcxsrv:
   '{{ version }}':
     full_name: 'VcXsrv'
-    installer: 'https://downloads.sourceforge.net/project/vcxsrv/vcxsrv/{{ version }}/vcxsrv-64.{{ version }}.installer.exe'
+    installer: 'https://phoenixnap.dl.sourceforge.net/project/vcxsrv/vcxsrv/{{ version }}/vcxsrv-64.{{ version }}.installer.exe'
     install_flags: '/S'
     uninstaller: '{{ PROGRAM_FILES }}\VcXsrv\uninstall.exe'
     uninstall_flags: '/S'

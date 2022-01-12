@@ -14,7 +14,7 @@
 wireshark:
   {% for version in versions %}
   '{{ version }}.0':
-    full_name: 'Wireshark'
+    full_name: 'Wireshark {{ version }} 64-bit'
     installer:   'https://1.na.dl.wireshark.org/win64/Wireshark-win64-{{ version }}.exe'
     uninstaller: 'https://1.na.dl.wireshark.org/win64/Wireshark-win64-{{ version }}.exe'
     install_flags:   '/S /EXTRACOMPONENTS=sshdump,udpdump,ciscodump,androiddump,randpktdump'
