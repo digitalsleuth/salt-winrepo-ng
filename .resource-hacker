@@ -1,0 +1,15 @@
+{% set versions = [('5.1.8','080e97f7c198aeeac2a172f055c09d8da365b59b58bf6a71bde4486d9992ff66')] %}
+
+resource-hacker:
+{% for version, hash in versions %}
+  '{{ version }}':
+    full_name: 'Resource Hacker Version {{ version }}'
+    installer: http://www.angusj.com/resourcehacker/reshacker_setup.exe
+    install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE'
+    uninstaller: 'C:\Program Files (x86)\Resource Hacker\unins000.exe'
+    uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
+    msiexec: False
+    locale: en_US
+    reboot: False
+    source_hash: sha256={{ hash }}
+{% endfor %}
