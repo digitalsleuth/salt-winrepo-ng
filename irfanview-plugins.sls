@@ -1,17 +1,15 @@
+{% set versions = [('459', '4.59', '7742d47f49293f885c42d6b566d2d55335b79d454a024bff3ee113dd8b8bb41c')] %}
+
 irfanview-plugins:
-  '4.42':
-    {% if grains['cpuarch'] == 'AMD64' %}
-    full_name: 'Irfanview Plugins 4.40'
-    installer: 'salt://win/repo-ng/irfanview/irfanview_plugins_x64_442_setup.exe'
-    # download manually from: http://www.irfanview.info/files/irfanview_plugins_x64_442_setup.exe and place on master
-    {% else %}
-    full_name: 'Irfanview Plugins 4.40'
-    installer: 'salt://win/repo-ng/irfanview/irfanview_plugins_442_setup.exe'
-    # download manually from: http://www.irfanview.info/files/irfanview_plugins_442_setup.exe and place on master
-    {% endif %}
+{% for url_version, dotted_version, hash in versions %}
+  '{{ dotted_version }}':
+    full_name: 'Irfanview Plugins {{ dotted_version }}'
+    installer: https://download.betanews.com/download/1099412658-1/iview{{ url_version }}_plugins_x64_setup.exe
     install_flags: '/silent'
     uninstaller: ''
     uninstall_flags: ''
+    source_hash: sha256={{ hash }}
     msiexec: False
     locale: en_US
     reboot: False
+{% endfor %}

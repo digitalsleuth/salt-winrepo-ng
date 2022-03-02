@@ -1,22 +1,20 @@
-# both 32-bit (x86) AND a 64-bit (AMD64) installer available
+{% set versions = [('459', '4.59', '56326517adb6b6b65b690fa20da2ffb9c5ae87501e80101f5cfd2078f9225cdb')] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
+
 irfanview:
-  '4.51':
-    {% if grains['cpuarch'] == 'AMD64' %}
-    full_name: 'IrfanView 64 (remove only)'
-    installer: 'salt://win/repo-ng/irfanview/iview451_x64_setup.exe'
-    # download manually from: http://www.irfanview.info/files/iview451_x64_setup.exe and place on master
-    {% else %}
-    full_name: 'IrfanView (remove only)'
-    installer: 'salt://win/repo-ng/irfanview/iview451_setup.exe'
-    # download manually from: http://www.irfanview.info/files/iview451_setup.exe and place on master
-    {% endif %}
-    install_flags: '/silent /desktop=0 /thumbs=0 /group=1 /allusers=0 /assoc=0'
-    uninstaller: '{{ PROGRAM_FILES }}\irfanview\iv_uninstall.exe'
+{% for url_version, dotted_version, hash in versions %}
+  '{{ dotted_version }}':
+    full_name: 'IrfanView {{ dotted_version }} (64-bit)'
+    installer: https://download.betanews.com/download/967963863-1/iview{{ url_version }}_x64_setup.exe
+    install_flags: '/silent /desktop=0 /thumbs=0 /group=1 /allusers=1 /assoc=1'
+    uninstaller: '{{ PROGRAM_FILES }}\IrfanView\iv_uninstall.exe'
     uninstall_flags: '/silent'
+    source_hash: sha256={{ hash }}
     msiexec: False
     locale: en_US
     reboot: False
+{% endfor %}
+
 # install_flags
 # folder:     destination folder; if not indicated: old IrfanView folder is used, if not found, the "Program Files" folder is used
 # silent:   silent install - no prompts
