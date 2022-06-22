@@ -10,25 +10,21 @@
 salt-minion-py3:
   {%
       for version in [
-          '3004-2',
-          '3004',
-          '3003.3',
-          '3002.7',
-          '3001.8',
+          '3004.2-1',
       ]
   %}
   '{{ version }}':
     full_name: 'Salt Minion {{ version }} (Python 3)'
     {% if grains['cpuarch'] == 'AMD64' %}
-    installer: 'https://repo.saltstack.com/windows/Salt-Minion-{{ version }}-Py3-AMD64-Setup.exe'
+    installer: 'https://repo.saltproject.io/windows/Salt-Minion-{{ version }}-Py3-AMD64-Setup.exe'
     {% else %}
-    installer: 'https://repo.saltstack.com/windows/Salt-Minion-{{ version }}-Py3-x86-Setup.exe'
+    installer: 'https://repo.saltproject.io/windows/Salt-Minion-{{ version }}-Py3-x86-Setup.exe'
     {% endif %}
     {% raw %}
     # install_flags: "/S /master={{ salt['pillar.get']('salt:master', 'salt.domain.tld') }} /minion-id={{ salt['pillar.get']('salt:minion:ids:' ~ grains['host'] }}"
     {% endraw %}
     install_flags: '/S'
-    uninstaller: 'C:\salt\uninst.exe'
+    uninstaller: 'C:\ProgramData\Salt Project\Salt\uninst.exe'
     uninstall_flags: '/S'
     msiexec: False
     use_scheduler: True
@@ -43,9 +39,56 @@ salt-minion-py3:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {%
       for version in [
+          '3003.5-1',
           '3003.2',
           '3003.1',
           '3003',
+          '3002.9-1',
+      ]
+  %}
+  '{{ version }}':
+    full_name: 'Salt Minion {{ version }} (Python 3)'
+    {% if grains['cpuarch'] == 'AMD64' %}
+    installer: 'https://repo.saltproject.io/windows/Salt-Minion-{{ version }}-Py3-AMD64-Setup.exe'
+    {% else %}
+    installer: 'https://repo.saltproject.io/windows/Salt-Minion-{{ version }}-Py3-x86-Setup.exe'
+    {% endif %}
+    {% raw %}
+    # install_flags: "/S /master={{ salt['pillar.get']('salt:master', 'salt.domain.tld') }} /minion-id={{ salt['pillar.get']('salt:minion:ids:' ~ grains['host'] }}"
+    {% endraw %}
+    install_flags: '/S'
+    uninstaller: 'C:\salt\uninst.exe'
+    uninstall_flags: '/S'
+    msiexec: False
+    use_scheduler: True
+    reboot: False
+  {% endfor %}
+
+  {%
+      for version in [
+          '3004.1-1',
+          '3004-3',
+          '3004-2',
+          '3004',
+      ]
+  %}
+  '{{ version }}':
+    skip_urltest: True
+    full_name: 'Salt Minion {{ version }} (Python 3)'
+    uninstaller: 'C:\ProgramData\Salt Project\Salt\uninst.exe'
+    uninstall_flags: '/S'
+    use_scheduler: True
+  {% endfor %}
+
+  {%
+      for version in [
+          '3003.4-1',
+          '3003.3',
+          '3003.2',
+          '3003.1',
+          '3003',
+          '3002.8-1',
+          '3002.7',
           '3002.6',
           '3002.5',
           '3002.4',
@@ -53,45 +96,6 @@ salt-minion-py3:
           '3002.2',
           '3002.1',
           '3002',
-          '3001.7',
-          '3001.6',
-          '3001.5',
-          '3000.9',
-          '3000.8',
-          '3000.7',
-          '3001.4',
-          '3001.2',
-          '3001.1',
-          '3001',
-          '3000.6',
-          '3000.4',
-          '3000.3',
-          '3000.2',
-          '3000.1',
-          '3000',
-          '2019.2.8',
-          '2019.2.6',
-          '2019.2.5',
-          '2019.2.4',
-          '2019.2.3',
-          '2019.2.2',
-          '2019.2.1',
-          '2019.2.0',
-          '2018.3.5',
-          '2018.3.4',
-          '2018.3.3',
-          '2018.3.2',
-          '2018.3.1',
-          '2018.3.0',
-          '2017.7.8',
-          '2017.7.7',
-          '2017.7.6',
-          '2017.7.5',
-          '2017.7.4',
-          '2017.7.3',
-          '2017.7.2',
-          '2017.7.1',
-          '2017.7.0',
       ]
   %}
   '{{ version }}':

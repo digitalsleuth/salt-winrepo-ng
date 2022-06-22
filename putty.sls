@@ -1,4 +1,4 @@
-{% set version = '0.76' %}
+{% set version = '0.77' %}
 putty:
   '{{ version }}.0.0':
     {% if grains['cpuarch'] == 'AMD64' %}

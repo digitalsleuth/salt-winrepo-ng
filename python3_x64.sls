@@ -1,4 +1,7 @@
-{% set EXE_VERSIONS = [('3.10.1', '3.10.1150.0'),
+{% set EXE_VERSIONS = [('3.10.4', '3.10.4150.0'),
+                       ('3.10.3', '3.10.3150.0'),
+                       ('3.10.2', '3.10.2150.0'),
+                       ('3.10.1', '3.10.1150.0'),
                        ('3.10.0', '3.10.150.0'),
                        ('3.9.9', '3.9.9150.0'),
                        ('3.9.8', '3.9.8150.0'),
@@ -38,7 +41,7 @@
 python3_x64:
   {% for VER, RAW_VER in EXE_VERSIONS %}
   '{{ RAW_VER }}':
-    full_name: 'Python {{ VER }} Core Interpreter (64-bit)'
+    full_name: 'Python {{ VER }} (64-bit)'
     installer: 'https://www.python.org/ftp/python/{{ VER }}/python-{{ VER }}-amd64.exe'
     install_flags: '/quiet InstallAllUsers=1 InstallLauncherAllUsers=1 Include_pip=1 AssociateFiles=1'
     uninstaller: 'https://www.python.org/ftp/python/{{ VER }}/python-{{ VER }}-amd64.exe'
@@ -49,7 +52,7 @@ python3_x64:
   {% endfor %}
   {% for VER, RAW_VER in MSI_VERSIONS %}
   '{{ RAW_VER }}':
-    full_name: 'Python {{ VER }} Core Interpreter (64-bit)'
+    full_name: 'Python {{ VER }} (64-bit)'
     installer: 'https://www.python.org/ftp/python/{{ VER }}/python-{{ VER }}.amd64.msi'
     install_flags: '/qn ALLUSERS=1 /norestart'
     uninstaller: 'https://www.python.org/ftp/python/{{ VER }}/python-{{ VER }}.amd64.msi'
