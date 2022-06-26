@@ -1,4 +1,4 @@
-{% set versions = [('6.54.02.6790', '6.54', 'bc9c8739267683214be5c872d8478c21e9dede95070b64a739df1d521c0e47bb')] %}
+{% set versions = [('7.01.00.7839', '7.01', 'c3f7cd0a66b100798066ecc5f6ad905cd5ee78caf011395b7e535011f4d31fc0'), ('6.54.02.6790', '6.54', 'bc9c8739267683214be5c872d8478c21e9dede95070b64a739df1d521c0e47bb')] %}
 
 free-hex-editor-neo:
   {% for long_version, short_version, hash in versions %}
