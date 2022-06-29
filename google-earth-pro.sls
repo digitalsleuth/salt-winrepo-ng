@@ -1,4 +1,4 @@
-{% set versions = [('7.3.4.8642', '7.3.4')] %}
+{% set versions = [('7.3.4.8642','7.3.4')] %}
 
 google-earth-pro:
 {% for full_version, short_version in versions %}
