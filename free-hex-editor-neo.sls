@@ -1,6 +1,9 @@
+{% set versions = [("7.02.01.7905", "7.02"), ("7.01.00.7839", "7.01")] %}
+
 free-hex-editor-neo:
-  '7.01.00.7839':
-    full_name: "HHD Software Free Hex Editor Neo 7.01"
+{% for long, short in versions %}
+  '{{ long }}':
+    full_name: "HHD Software Free Hex Editor Neo {{ short }}"
     installer: https://www.hhdsoftware.com/download/free-hex-editor-neo.exe
     install_flags: -silent -machine
     uninstaller: 'C:\Program Files\HHD Software\Hex Editor Neo\Setup\setup.exe'
@@ -8,3 +11,4 @@ free-hex-editor-neo:
     msiexec: False
     locale: en_US
     reboot: False
+{% endfor %}
