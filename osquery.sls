@@ -3,7 +3,8 @@
 {% set source_path = 'https://osquery-packages.s3.amazonaws.com/windows/' %}
 
 osquery:
-  {% for version in ['3.3.2',
+  {% for version in ['5.4.0',
+                     '3.3.2',
                      '3.3.0',
                      '3.2.6',
                      '3.2.4',
