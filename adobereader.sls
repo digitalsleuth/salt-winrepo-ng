@@ -1,19 +1,13 @@
 adobereader:
-  '10.1.4':
-    full_name: 'Adobe Reader X (10.1.4)'
-    installer: 'http://ardownload.adobe.com/pub/adobe/reader/win/10.x/10.1.4/en_US/AdbeRdr1014_en_US.exe'
-    install_flags: '/msi EULA_ACCEPT=YES REMOVE_PREVIOUS=YES ALLUSERS=1 /qn /norestart'
+  {% for version in ['22.003.20263', '22.003.20258', '21.007.20099', '21.005.20048', '21.001.20155', '21.001.20145', '21.001.20140', '21.001.20135', '20.013.20074', '20.013.20064', '20.012.20048', '20.012.20041', '20.009.20063', '20.006.20042', '20.006.20034', '19.021.20058', '19.021.20049', '19.021.20047', '19.012.20036', '19.012.20034', '19.010.20099', '19.010.20098', '19.010.20091', '19.010.20069', '19.010.20064', '19.008.20081', '19.008.20071', '18.011.20063', '18.011.20058', '18.011.20055', '18.011.20040'] %}
+  {% set versionNoDots = version | replace(".","") %}
+  '{{ version }}':
+    full_name: 'Adobe Acrobat Reader'
+    installer: 'https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/{{ versionNoDots }}/AcroRdrDC{{ versionNoDots }}_en_US.exe'
+    install_flags: '/msi EULA_ACCEPT=YES ALLUSERS=1 REMOVE_PREVIOUS=YES DISABLEDESKTOPSHORTCUT=1 /qn'
     uninstaller: 'msiexec.exe'
-    uninstall_flags: '/qn /x {AC76BA86-7AD7-1033-7B44-AA1000000001} /norestart'
+    uninstall_flags: '/qn /x {AC76BA86-7AD7-1033-7B44-AC0F074E4100} /norestart'
     msiexec: False
     locale: en_US
     reboot: False
-  '9.5.0':
-    full_name: 'Adobe Reader 9.5.0'
-    installer: 'http://ardownload.adobe.com/pub/adobe/reader/win/9.x/9.5.0/en_US/AdbeRdr950_en_US.exe'
-    install_flags: '/msi EULA_ACCEPT=YES REMOVE_PREVIOUS=YES ALLUSERS=1 /qn /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/qn /x {AC76BA86-7AD7-1033-7B44-A95000000001} /norestart'
-    msiexec: False
-    locale: en_US
-    reboot: False
+  {% endfor %}
