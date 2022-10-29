@@ -8,4 +8,3 @@ passware-encryption-analyzer:
     msiexec: True
     locale: en_US
     reboot: False
-    cache_dir: False
