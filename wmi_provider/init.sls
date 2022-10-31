@@ -35,7 +35,7 @@ majreg:
       - file: c:\scripts\wmi_inst\i386\MSI.MF_
       - file: c:\scripts\wmi_inst\i386\MSI.MO_
       - file: c:\scripts\wmi_inst\i386\MSIPROV.DL_
-      - file:  c:\scripts\wmi_inst\majsetup.reg
+      - file: c:\scripts\wmi_inst\majsetup.reg
       - file: c:\scripts\wmi_inst\answer.txt
 
 wmi_inst:
@@ -45,7 +45,7 @@ wmi_inst:
       - file: c:\scripts\wmi_inst\i386\MSI.MF_
       - file: c:\scripts\wmi_inst\i386\MSI.MO_
       - file: c:\scripts\wmi_inst\i386\MSIPROV.DL_
-      - file:  c:\scripts\wmi_inst\majsetup.reg
+      - file: c:\scripts\wmi_inst\majsetup.reg
       - file: c:\scripts\wmi_inst\answer.txt
       - cmd: majreg
 
