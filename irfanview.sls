@@ -1,4 +1,5 @@
-{% set versions = [('459', '4.59', '56326517adb6b6b65b690fa20da2ffb9c5ae87501e80101f5cfd2078f9225cdb')] %}
+{% set versions = [('460', '4.60', 'f653d6cf6fd88a3ab44b3d41b19161b1bda5b34b853176d33a105513d832bf2c'),
+                   ('459', '4.59', '56326517adb6b6b65b690fa20da2ffb9c5ae87501e80101f5cfd2078f9225cdb')] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 irfanview:
