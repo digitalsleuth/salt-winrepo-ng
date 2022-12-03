@@ -1,6 +1,7 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set version = '4126' %}
+{% set versions = ['4143','4142','4126'] %}
 sublime-text:
+  {% for version in versions %}
   '{{ version }}':
     full_name: 'Sublime Text'
     installer: 'https://download.sublimetext.com/sublime_text_build_{{ version }}_x64_setup.exe'
@@ -10,3 +11,4 @@ sublime-text:
     msiexec: False
     locale: en_US
     reboot: False
+{% endfor %}

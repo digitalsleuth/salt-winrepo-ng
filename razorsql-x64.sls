@@ -1,5 +1,6 @@
 {% set PROGRAM_FILES = 'C:\Program Files' %}
-{% set versions = [("10.0.6", "10_0_6")] %}
+{% set versions = [('10.1.1', '10_1_1'),
+                   ('10.0.6', '10_0_6')] %}
 
 razorsql-x64:
 {% for dot_ver, under_ver in versions %}

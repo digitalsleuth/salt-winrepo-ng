@@ -1,3 +1,4 @@
+# Has been taken over by https://github.com/winsiderss/systeminformer, but current version is still the one below
 {% set versions = [('2.39.0.124', '2.39 (r124)', '28042dd4a92a0033b8f1d419b9e989c5b8e32d1d2d881f5c8251d58ce35b9063' )] %}
 
 process-hacker:

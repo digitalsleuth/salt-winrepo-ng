@@ -1,5 +1,6 @@
-{% set version = '0.77' %}
+{% set versions = ['0.78','0.77'] %}
 putty:
+  {% for version in versions %}
   '{{ version }}.0.0':
     {% if grains['cpuarch'] == 'AMD64' %}
     {% set ver_arch = " (64-bit)" %}
@@ -15,3 +16,4 @@ putty:
     msiexec: True
     locale: en_US
     reboot: False
+  {% endfor %}

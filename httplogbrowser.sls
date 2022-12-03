@@ -1,6 +1,6 @@
 {% set versions = [
-        ('4.6.0.0', '805a20bf88d2d8a7b25d52b48ab758e2465282cb4f0377f2dfaf73a511d197a9'),
-        ('4.6.1.0', 'b0be7f490cd6b58057b439648c61f9cc4da93e47ae1cca65be3babd4b124d1eb')
+        ('4.6.1.0', 'b0be7f490cd6b58057b439648c61f9cc4da93e47ae1cca65be3babd4b124d1eb'),
+        ('4.6.0.0', '805a20bf88d2d8a7b25d52b48ab758e2465282cb4f0377f2dfaf73a511d197a9')
 ] %}
 
 httplogbrowser:
