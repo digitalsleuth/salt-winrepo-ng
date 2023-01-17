@@ -8,11 +8,7 @@
 # will have to upgrade Salt through another means.
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 salt-minion-py3:
-  {%
-      for version in [
-          '3004.2-1',
-      ]
-  %}
+  {% for version in ['3005.1-5','3005.1-4','3005.1-3','3005.1-2','3005.1-1','3005','3004.2-1','3004.2','3004.1-1','3004.1'] %}
   '{{ version }}':
     full_name: 'Salt Minion {{ version }} (Python 3)'
     {% if grains['cpuarch'] == 'AMD64' %}
@@ -24,7 +20,7 @@ salt-minion-py3:
     # install_flags: "/S /master={{ salt['pillar.get']('salt:master', 'salt.domain.tld') }} /minion-id={{ salt['pillar.get']('salt:minion:ids:' ~ grains['host'] }}"
     {% endraw %}
     install_flags: '/S'
-    uninstaller: 'C:\ProgramData\Salt Project\Salt\uninst.exe'
+    uninstaller: 'C:\Program Files\Salt Project\Salt\uninst.exe'
     uninstall_flags: '/S'
     msiexec: False
     use_scheduler: True
@@ -59,22 +55,6 @@ salt-minion-py3:
     msiexec: False
     use_scheduler: True
     reboot: False
-  {% endfor %}
-
-  {%
-      for version in [
-          '3004.1-1',
-          '3004-3',
-          '3004-2',
-          '3004',
-      ]
-  %}
-  '{{ version }}':
-    skip_urltest: True
-    full_name: 'Salt Minion {{ version }} (Python 3)'
-    uninstaller: 'C:\ProgramData\Salt Project\Salt\uninst.exe'
-    uninstall_flags: '/S'
-    use_scheduler: True
   {% endfor %}
 
   {%
