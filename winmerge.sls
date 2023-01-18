@@ -5,7 +5,7 @@
 {% endif %}
 
 winmerge:
-  {% for version in ['2.16.0','2.14.0'] %}
+  {% for version in ['2.16.16','2.16.14','2.16.12','2.16.10','2.16.8','2.16.6','2.16.4','2.16.2','2.16.0','2.14.0'] %}
   '{{version}}':
     full_name: 'WinMerge {{version}}'
     installer: 'https://downloads.sourceforge.net/project/winmerge/stable/{{version}}/WinMerge-{{version}}-Setup.exe'

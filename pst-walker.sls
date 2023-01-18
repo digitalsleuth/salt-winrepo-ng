@@ -1,7 +1,8 @@
-{% set versions = [('6.21', '621', '3512DFDC7BEEFEFCA6144FD923CBEE02E35A0A8EE3F9BCB28EE2C47D7C902D30')] %}
+{% set versions = [('6.21', '3512DFDC7BEEFEFCA6144FD923CBEE02E35A0A8EE3F9BCB28EE2C47D7C902D30')] %}
 
 pst-walker:
-{% for version, dotless_version, hash in versions %}
+{% for version, hash in versions %}
+  {% set dotless_version = version | replace(".","") %}
   '{{ version }}':
     full_name: 'PST Walker {{ version }}'
     installer: https://downloads.pstwalker.com/pstwalker{{ dotless_version }}.exe
