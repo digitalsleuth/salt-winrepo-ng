@@ -11,7 +11,11 @@ $script_path = dir "$($myInvocation.MyCommand.Definition)"
 $script_path = $script_path.DirectoryName
 
 # Define variables
-$base_url="https://github.com/bitwarden/cli/releases/download/v$version/"
+if (($version.Split('.')[0]) -ge 2023) {
+  $base_url = "https://github.com/bitwarden/clients/releases/download/cli-v$version"
+} else {
+  $base_url="https://github.com/bitwarden/cli/releases/download/v$version/"
+}
 $filename = "bw-windows-$version.zip"
 $url = "$base_url/$filename"
 $zip_file = "$script_path\$filename"
@@ -39,7 +43,7 @@ $size = (Get-ChildItem "$env:ProgramFiles\Bitwarden CLI" | Measure Length -Sum).
 
 #Make registry entries
 New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" -Name "Bitwarden-CLI" | Out-Null
-New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Bitwarden-CLI" -Name "DisplayName" -Value "Bitwarden CLI" | Out-Null
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Bitwarden-CLI" -Name "DisplayName" -Value "Bitwarden CLI $version" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Bitwarden-CLI" -Name "DisplayVersion" -Value "$version" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Bitwarden-CLI" -Name "UninstallString" -Value "Managed by Salt" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Bitwarden-CLI" -Name "Publisher" -Value "Bitwarden.com" | Out-Null

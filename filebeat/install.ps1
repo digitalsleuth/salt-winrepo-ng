@@ -41,7 +41,7 @@ $size = (Get-ChildItem "$env:ProgramFiles\Filebeat" | Measure Length -Sum).Sum /
 
 #Make registry entries
 New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" -Name "Filebeat" | Out-Null
-New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Filebeat" -Name "DisplayName" -Value "Filebeat" | Out-Null
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Filebeat" -Name "DisplayName" -Value "Filebeat $version" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Filebeat" -Name "DisplayVersion" -Value "$version" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Filebeat" -Name "UninstallString" -Value "Managed by Salt" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Filebeat" -Name "Publisher" -Value "Elastic.co" | Out-Null

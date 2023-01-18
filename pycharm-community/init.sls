@@ -17,14 +17,14 @@
                    ('2022.1.1','221.5591.52'),
                    ('2022.1','221.5080.212')] %}
 
-pycharm-pro:
+pycharm-community:
   {% for version, build in versions %}
   '{{ build }}':
-    installer: '{{ url }}/pycharm-professional-{{ version }}.exe'
-    full_name: 'PyCharm {{ version }}'
-    install_flags: '/S /CONFIG=C:\ProgramData\Salt Project\Salt\var\cache\salt\minion\files\base\win\repo-ng\salt-winrepo-ng\pycharm-pro\silent.config'
-    cache_file: salt://win/repo-ng/salt-winrepo-ng/pycharm-pro/silent.config
-    uninstaller: '{{ PROGRAM_FILES }}\JetBrains\PyCharm {{ version }}\bin\Uninstall.exe'
+    installer: '{{ url }}/pycharm-community-{{ version }}.exe'
+    full_name: 'PyCharm Community Edition {{ version }}'
+    install_flags: '/S /CONFIG=C:\ProgramData\Salt Project\Salt\var\cache\salt\minion\files\base\win\repo-ng\salt-winrepo-ng\pycharm-community\silent.config'
+    cache_file: salt://win/repo-ng/salt-winrepo-ng/pycharm-community/silent.config
+    uninstaller: '{{ PROGRAM_FILES }}\JetBrains\PyCharm Community Edition {{ version }}\bin\Uninstall.exe'
     uninstall_flags: '/S'
     msiexec: False
     reboot: False

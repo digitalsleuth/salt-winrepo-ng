@@ -44,7 +44,7 @@ $size = (Get-ChildItem "$env:ProgramFiles\Winlogbeat" | Measure Length -Sum).Sum
 
 #Make registry entries
 New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" -Name "Winlogbeat" | Out-Null
-New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Winlogbeat" -Name "DisplayName" -Value "Winlogbeat" | Out-Null
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Winlogbeat" -Name "DisplayName" -Value "Winlogbeat $version" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Winlogbeat" -Name "DisplayVersion" -Value "$version" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Winlogbeat" -Name "UninstallString" -Value "Managed by Salt" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Winlogbeat" -Name "Publisher" -Value "Elastic.co" | Out-Null

@@ -4,7 +4,13 @@
 {% else %}
     {% set PROGRAM_FILES = "%ProgramFiles%" %}
 {% endif %}
-{% set VERSIONS  = ['3.1.15',
+{% set VERSIONS  = ['4.1.0',
+                    '4.0.4',
+                    '4.0.3',
+                    '4.0.2',
+                    '4.0.0',
+                    '3.1.16',
+                    '3.1.15',
                     '3.1.14',
                     '3.1.13',
                     '3.1.12',
@@ -35,7 +41,7 @@ gpg4win:
   {{ VERSION }}:
     full_name: 'Gpg4win ({{ VERSION }})'
     installer: 'http://files.gpg4win.org/gpg4win-{{ VERSION }}.exe'
-    install_flags: '/S /C=C:\salt\var\cache\salt\minion\files\base\win\repo-ng\salt-winrepo-ng\gpg4win\silent.ini'
+    install_flags: '/S /C=C:\Program Data\Salt Project\Salt\var\cache\salt\minion\files\base\win\repo-ng\salt-winrepo-ng\gpg4win\silent.ini'
     uninstaller: '{{ PROGRAM_FILES }}\gpg4win\gpg4win-uninstall.exe'
     uninstall_flags: '/S'
     cache_file: salt://win/repo-ng/salt-winrepo-ng/gpg4win/silent.ini

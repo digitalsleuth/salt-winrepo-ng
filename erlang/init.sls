@@ -1,4 +1,7 @@
 {% set versions = [
+  ('25.2', '25.2', '13.1.3'),
+  ('25.1', '25.1', '13.1'),
+  ('25.0', '25.0', '13.0'),
   ('23.3', '23.3', '11.2'),
   ('23.2', '23.2', '11.1.4'),
   ('23.1', '23.1', '11.1'),
@@ -21,6 +24,12 @@ erlang:
   {% set major_version = otp_version.split(".")[0] | int %}
   '{{ otp_version }}':
     full_name: 'Erlang OTP {{ display_version }} ({{ erlang_version }})'
+    {% if major_version >= 25 %}
+    installer: 'https://erlang.org/download/otp_win{{ BITS }}_{{ otp_version }}.exe'
+    install_flags: '/S'
+    uninstaller: '%ProgramFiles%\Erlang OTP\Uninstall.exe'
+    uninstall_flags: '/S'
+    {% else %}
     installer: 'salt://win/repo-ng/salt-winrepo-ng/erlang/install.cmd'
     install_flags: '"http://erlang.org/download/otp_win{{ BITS }}_{{ otp_version }}.exe" "otp_win{{ BITS }}_{{ otp_version }}.exe" "{{ otp_version }}" "Erlang OTP {{ otp_version.split('.')[0] }} ({{ erlang_version }})" "/S"'
     {% if major_version >= 23 %}
@@ -29,6 +38,7 @@ erlang:
     uninstaller: '%ProgramFiles%\erl{{ erlang_version }}\Uninstall.exe'
     {% endif %}
     uninstall_flags: '/S'
+    {% endif %}
     msiexec: False
     locale: en_US
     reboot: False
