@@ -1,15 +1,11 @@
-{% if grains['cpuarch'] == 'AMD64' %}
-    {% set PROGRAM_FILES = "%ProgramFiles(x86)%" %}
-{% else %}
-    {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% endif %}
+{% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 winmerge:
-  {% for version in ['2.16.16','2.16.14','2.16.12','2.16.10','2.16.8','2.16.6','2.16.4','2.16.2','2.16.0','2.14.0'] %}
+  {% for version in ['2.16.25','2.16.24','2.16.23','2.16.22','2.16.21','2.16.20','2.16.19','2.16.18','2.16.17','2.16.16','2.16.15','2.16.14'] %}
   '{{version}}':
-    full_name: 'WinMerge {{version}}'
-    installer: 'https://downloads.sourceforge.net/project/winmerge/stable/{{version}}/WinMerge-{{version}}-Setup.exe'
-    install_flags: '/SP- /verysilent /norestart'
+    full_name: 'WinMerge {{version}}.0 x64'
+    installer: 'https://github.com/WinMerge/winmerge/releases/download/v{{ version }}/WinMerge-{{ version }}-x64-Setup.exe'
+    install_flags: '/SP- /VERYSILENT /NORESTART /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: '{{ PROGRAM_FILES }}\WinMerge\unins000.exe'
     uninstall_flags: '/SP- /verysilent /norestart'
     msiexec: False
