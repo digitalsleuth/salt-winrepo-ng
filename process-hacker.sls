@@ -5,7 +5,7 @@ process-hacker:
 {% for version, rel_version, hash in versions %}
   '{{ version }}':
     full_name: 'Process Hacker {{ rel_version }}'
-    installer: https://github.com/processhacker/processhacker/releases/download/v2.39/processhacker-2.39-setup.exe
+    installer: https://github.com/winsiderss/systeminformer/releases/download/v2.39/processhacker-2.39-setup.exe
     install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: 'C:\Program Files\Process Hacker 2\unins000.exe'
     uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
