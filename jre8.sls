@@ -4,8 +4,19 @@
 # Do NOT use the 'archive' versions download page, use the 'manual' one above. The 'archive' one will give 
 # you more versions and also different builds. IF you do use these, make sure you adapt your sls file accordingly.  
 # http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html
+{% set versions = {'8.0':['3610.9','3110.11','2910.10','2510.8','2410.7','2310.9','2210.9','2110.9','2010.9']} %}
 
-{% set versions = {'8.0':['2010.9','2110.9','2210.9','2310.9','2410.7','2510.8','2910.10','3110.11']} %}
+#{% set versions = [('8','361','8.0.3610.9','64', '247945_0ae14417abb444ebb02b9815e2103550')] %}
+
+#jre8:
+#  {% for major, minor, full, bit, id in versions %}
+#  '{{ full }}':
+#    full_name: 'Java {{ major }} Update {{ minor }} ({{ bit }}-bit)'
+#    installer: 'https://javadl.oracle.com/webapps/download/AutoDL?BundleId={{ id }}'
+#    install_flags: '/s'
+#    uninstaller: 'msiexec.exe'
+#    uninstall_flags: '/x {26A24AE4-039D-4CA4-87B4-2F{{ bit }}1{{ major }}0{{ minor }}F0} /qn /norestart'
+#  {% endfor %}
 
 jre8:
 {% for major, subversions in versions.items() %}
@@ -14,11 +25,11 @@ jre8:
   '{{major}}.{{minor}}':
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Java 8 Update {{minor_main}} (64-bit)'
-    installer: 'salt://win/repo-ng/jre8/jre-8u{{minor_main}}-windows-x64.exe'
+    installer: 'salt://win/repo-ng/files/jre-8u{{minor_main}}-windows-x64.exe'
     uninstall_flags: '/qn /x {26A24AE4-039D-4CA4-87B4-2F64180{{minor_main}}F0} /norestart'
     {% else %}
     full_name: 'Java 8 Update {{minor_main}}'
-    installer: 'salt://win/repo-ng/jre8/jre8_x86/jre-8u{{minor_main}}-windows-i586.exe'
+    installer: 'salt://win/repo-ng/files/jre8_x86/jre-8u{{minor_main}}-windows-i586.exe'
     uninstall_flags: '/qn /x {26A24AE4-039D-4CA4-87B4-2F32180{{minor_main}}F0} /norestart'
     {% endif %}
     install_flags: '/s REBOOT=Suppress SPONSORS=0 REMOVEOUTOFDATEJRES=1 AUTO_UPDATE=Disable'
