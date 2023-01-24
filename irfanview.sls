@@ -1,12 +1,13 @@
-{% set versions = [('460', '4.60', 'f653d6cf6fd88a3ab44b3d41b19161b1bda5b34b853176d33a105513d832bf2c'),
-                   ('459', '4.59', '56326517adb6b6b65b690fa20da2ffb9c5ae87501e80101f5cfd2078f9225cdb')] %}
+{% set versions = [('4.60', 'f653d6cf6fd88a3ab44b3d41b19161b1bda5b34b853176d33a105513d832bf2c'),
+                   ('4.59', '56326517adb6b6b65b690fa20da2ffb9c5ae87501e80101f5cfd2078f9225cdb')] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 irfanview:
-{% for url_version, dotted_version, hash in versions %}
-  '{{ dotted_version }}':
-    full_name: 'IrfanView {{ dotted_version }} (64-bit)'
-    installer: https://download.betanews.com/download/967963863-1/iview{{ url_version }}_x64_setup.exe
+{% for version, hash in versions %}
+  {% set dotless_version = version | replace(".","") %}
+  '{{ version }}':
+    full_name: 'IrfanView {{ version }} (64-bit)'
+    installer: https://download.betanews.com/download/967963863-1/iview{{ dotless_version }}_x64_setup.exe
     install_flags: '/silent /desktop=0 /thumbs=0 /group=1 /allusers=1 /assoc=1'
     uninstaller: '{{ PROGRAM_FILES }}\IrfanView\iv_uninstall.exe'
     uninstall_flags: '/silent'
