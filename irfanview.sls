@@ -1,4 +1,5 @@
-{% set versions = [('4.60', 'f653d6cf6fd88a3ab44b3d41b19161b1bda5b34b853176d33a105513d832bf2c'),
+{% set versions = [('4.62', 'd9d4c5f3120a9420e2dbaf0ee8931556e161787fbc4297d5fb4e4c7616fdd668'),
+                   ('4.60', 'f653d6cf6fd88a3ab44b3d41b19161b1bda5b34b853176d33a105513d832bf2c'),
                    ('4.59', '56326517adb6b6b65b690fa20da2ffb9c5ae87501e80101f5cfd2078f9225cdb')] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
