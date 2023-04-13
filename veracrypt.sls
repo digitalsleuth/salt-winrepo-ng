@@ -1,8 +1,3 @@
-{% if grains['cpuarch'] == 'AMD64' %}
-    {% set PROGRAM_FILES = "%ProgramFiles(x86)%" %}
-{% else %}
-    {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% endif %}
 veracrypt:
   '1.25.9':
     full_name: 'VeraCrypt 1.25.9'

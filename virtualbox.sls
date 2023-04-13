@@ -4,6 +4,18 @@
 {% set source_path = 'https://download.virtualbox.org/virtualbox/' %}
 
 virtualbox:
+{% for version, build_number in [('7.0.6', '155176')] %}
+  '{{ version }}':
+    full_name: 'Oracle VM VirtualBox {{ version }}'
+    installer: '{{ source_path}}{{ version }}/VirtualBox-{{ version }}-{{ build_number }}-Win.exe'
+    install_flags: '--silent'
+    uninstaller: 'msiexec.exe'
+    uninstall_flags: '/qn /x {5C50439B-4A95-4615-A77B-6D250D734303} /norestart'
+    msiexec: false
+    locale: en_US
+    reboot: False
+{% endfor %}
+
 {% for version, build_number in [('7.0.4', '154605')] %}
   '{{ version }}':
     full_name: 'Oracle VM VirtualBox {{ version }}'
@@ -30,7 +42,7 @@ virtualbox:
     msiexec: False
     locale: en_US
     reboot: False
-  {% endfor %}
+{% endfor %}
 
 {% for version, build_number in [('5.2.26', '128414')] %}
   '{{ version }}':
@@ -46,4 +58,4 @@ virtualbox:
     msiexec: False
     locale: en_US
     reboot: False
-  {% endfor %}
+{% endfor %}
