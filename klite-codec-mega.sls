@@ -1,5 +1,6 @@
 {% set PROGRAM_FILES = 'C:\Program Files (x86)' %}
-{% set versions = [('17.1.0', '374f0696cdaf6504d32e4a08aec71558dde82aef426b9eb1fc23cff3639f3493')] %}
+{% set versions = [('17.5.5','27e879aaf9f13b222508be709b63f9365c85869e1f7cd7659bcf389a5de5ae8b'),
+                   ('17.1.0','374f0696cdaf6504d32e4a08aec71558dde82aef426b9eb1fc23cff3639f3493')] %}
 
 klite-codec-mega:
 {% for version, hash in versions %}
