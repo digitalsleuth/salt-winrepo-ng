@@ -1,4 +1,5 @@
-{% set versions = [('4.11','d8d33babd7e171e96694318989ff768cbbd08c9fc3429bda61daa087fa211a6e'),
+{% set versions = [('4.12','60811dc45b50bcfedb4c606f2efbfe75a6d71a4c24c0f84983857d3a70e7c133'),
+                   ('4.11','d8d33babd7e171e96694318989ff768cbbd08c9fc3429bda61daa087fa211a6e'),
                    ('4.10','c2fccc0c6b9104d2e23266b911565b5ff5c1b32a594421069de03000686e21ad')] %}
 
 msg-viewer:
