@@ -1,5 +1,5 @@
 {% set version = '15.05' %}
-{% set PROGRAM_FILES = '%ProgramFiles%' %}
+{% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 7zip-1505:
   '{{ version }}':
