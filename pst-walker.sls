@@ -1,4 +1,5 @@
-{% set versions = [('7.12','a2ce137a3ccf55fafe4ce958eb84fff570926afc2c956cc75ac770a4246a4a12'),
+{% set versions = [('7.15','b64a4a5cbea66d5791e38ba0395a93161bde79b0950a0886f4cdc47cec46d8c0'),
+                   ('7.12','a2ce137a3ccf55fafe4ce958eb84fff570926afc2c956cc75ac770a4246a4a12'),
                    ('7.11','e9f503afc201aeae1d29b6f5e9910bb67654addd041cfb3f68c62354749158e1'),
                    ('7.10','5e7424871021ee8b71f82002e4c2841f22abeedb55c453d12716f191f97d7ecd'),
                    ('7.08','af333db610501b166ada2ba51029862659fcee89351fde87d5a5ee5cb9eb0bb9'),
