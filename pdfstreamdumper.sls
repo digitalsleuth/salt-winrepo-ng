@@ -1,12 +1,12 @@
 # InnoSetup
 pdfstreamdumper:
-  '0.9.624':
+  '0.9.634':
     full_name: 'PDFStreamDumper 0.9.5xx'
-    installer: https://github.com/dzzie/pdfstreamdumper/releases/download/current/PDFStreamDumper_Setup.exe
+    installer: http://sandsprite.com/CodeStuff/PDFStreamDumper_Setup.exe
     install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: 'C:\PDFStreamDumper\unins000.exe'
     uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
     msiexec: False
     locale: en_US
     reboot: False
-    source_hash: sha256=3297d271db055194a65f2f46fa073e2cd112c62e5b23cdedffe292ac21637599
+    source_hash: sha256=c26068186f63dcce9cc57502be742c728110eab07570c319a0d7d10587a6e22d
