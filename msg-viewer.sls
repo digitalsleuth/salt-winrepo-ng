@@ -1,10 +1,7 @@
-{% set versions = [('4.15','e780d4b45f3b7d6c2ab050b62cbaa8c7d12d01c8bf0f394888563b80447b7a59'),
-                   ('4.12','60811dc45b50bcfedb4c606f2efbfe75a6d71a4c24c0f84983857d3a70e7c133'),
-                   ('4.11','d8d33babd7e171e96694318989ff768cbbd08c9fc3429bda61daa087fa211a6e'),
-                   ('4.10','c2fccc0c6b9104d2e23266b911565b5ff5c1b32a594421069de03000686e21ad')] %}
+{% set versions = ['4.19','4.15','4.12','4.11','4.10'] %}
 
 msg-viewer:
-{% for version, hash in versions %}
+{% for version in versions %}
   {% set dotless_version = version | replace(".","") %}
   '{{ version }}':
     full_name: 'MSG Viewer {{ version }}'
@@ -12,7 +9,6 @@ msg-viewer:
     install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: 'C:\Program Files (x86)\MSG Viewer\unins000.exe'
     uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
-    source_hash: sha256={{ hash }}
     msiexec: False
     locale: en_US
     reboot: False
