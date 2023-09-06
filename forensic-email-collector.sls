@@ -1,4 +1,4 @@
-{% set versions = [('3.87.0.6','2c77980b1008','{98E95AD0-540F-46D9-B671-DA4BAC52EB82}')] %}
+{% set versions = [('3.88.0.15','16be92bc7305','{B251D7AA-86B6-451E-8BAD-691AFAD171E5}'),('3.87.0.6','2c77980b1008','{98E95AD0-540F-46D9-B671-DA4BAC52EB82}')] %}
 
 forensic-email-collector:
   {% for version, folder_hash, uninstall_string in versions %}
