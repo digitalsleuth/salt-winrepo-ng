@@ -1,4 +1,4 @@
-{% set versions = ['4.19','4.15','4.12','4.11','4.10'] %}
+{% set versions = ['4.22','4.19','4.15','4.12','4.11','4.10'] %}
 
 msg-viewer:
 {% for version in versions %}
