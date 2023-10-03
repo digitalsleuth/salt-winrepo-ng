@@ -1,5 +1,6 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = [('2022.11.2', '7ab4387b226b63241a7eef35db8491d5b413d84462819ec5e69af80045a736b4'),
+{% set versions = [('2023.10.1.2','080fdd5a3f809f321cf35167b84708fc5fda030084010fff200c5075f5c61540'),
+                   ('2022.11.2', '7ab4387b226b63241a7eef35db8491d5b413d84462819ec5e69af80045a736b4'),
                    ('2022.3', '7f82e54bf11a160973c0e492a6c0a1d6f14e2dbdd048232fb058dea12c1b013d'),
                    ('2022.2.4', '3de69537fc9acb97775b0b4e15b825782708150c20f8ef06f920a086fca54fda'),
                    ('2022.2.3', '121cf96a79c9e4751736451985ef14047ee01a7ca5d3a618753438d82d1f1180'),

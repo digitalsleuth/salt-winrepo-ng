@@ -4,16 +4,17 @@
 # - install.cmd
 # - install.ps1
 
-{% set versions = [('9.0.3349.1','3349')] %}
+{% set versions = [('9.2.3406.1','3406','{6F40EA5D-AE1B-4F5C-A092-C7AAF0716BEB}'),
+                   ('9.0.3349.1','3349','{AA12330A-346E-4E81-ADE6-4BCB691A5FFB}')] %}
 
 agentransack:
-{% for version, subversion in versions %}
+{% for version, subversion, uninstall in versions %}
   '{{ version }}':
     full_name: 'Agent Ransack'
     installer: 'salt://win/repo-ng/salt-winrepo-ng/agentransack/install.cmd'
     install_flags: {{ subversion }}
     uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {AA12330A-346E-4E81-ADE6-4BCB691A5FFB} /qn /norestart'
+    uninstall_flags: '/x {{ uninstall }} /qn /norestart'
     locale: en_US
     msiexec: False
     reboot: False

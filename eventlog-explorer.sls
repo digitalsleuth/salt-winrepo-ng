@@ -1,4 +1,4 @@
-{% set versions = ['5.3'] %}
+{% set versions = ['5.4'] %}
 {% set PROGRAM_FILES = '%ProgramFiles(x86)%' %}
 
 eventlog-explorer:

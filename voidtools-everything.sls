@@ -1,4 +1,4 @@
-{% set versions = ['1.4.1.1022','1.4.1.1005','1.4.1.986'] %}
+{% set versions = ['1.4.1.1024','1.4.1.1022','1.4.1.1005','1.4.1.986'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 voidtools-everything:

@@ -1,5 +1,5 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['7.0.3', '7.0.2', '7.0.1', '6.0.2', '6.0.1'] %}
+{% set versions = ['9.0.0', '7.0.3', '7.0.2', '7.0.1', '6.0.2', '6.0.1'] %}
 
 graphviz:
   {% for version in versions %}
