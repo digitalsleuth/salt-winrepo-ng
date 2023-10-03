@@ -4,9 +4,9 @@ ilspy:
   {% for version, subversion, uninstall in versions %}
   '{{ subversion }}':
     full_name: 'ILSpy'
-    installer: 'https://github.com/icsharpcode/ILSpy/releases/download/v{{ version }}/ILSpy_Installer_{{ subversion}}-x64.msi'
+    installer: 'https://github.com/icsharpcode/ILSpy/releases/download/v{{ version }}/ILSpy_Installer_{{ subversion }}-x64.msi'
     uninstaller: 'msiexec.exe'
-    install_flags: '/qn /norestart'
+    install_flags: '/qn ALLUSERS=1 /norestart'
     uninstall_flags: '/x {{ uninstall }} /qn /norestart'
     msiexec: False
     locale: en_US
