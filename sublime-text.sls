@@ -1,5 +1,5 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['4143','4142','4126'] %}
+{% set versions = ['4152','4143','4142','4126'] %}
 sublime-text:
   {% for version in versions %}
   '{{ version }}':

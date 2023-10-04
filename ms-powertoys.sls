@@ -1,4 +1,4 @@
-{% set versions = ['0.72.0','0.64.1'] %}
+{% set versions = ['0.74.1','0.72.0','0.64.1'] %}
 
 ms-powertoys:
 {% for version in versions %}
