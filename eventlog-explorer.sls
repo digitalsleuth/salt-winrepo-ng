@@ -4,7 +4,7 @@
 eventlog-explorer:
   {% for version in versions %}
   '{{ version }}':
-    full_name: 'Event Log Explorer {{ version }}'
+    full_name: 'Event Log Explorer Standard Edition {{ version }}'
     installer: https://eventlogxp.com/download/elex_setup.exe
     install_flags: '/SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: '{{ PROGRAM_FILES }}\Event Log Explorer\unins000.exe'
