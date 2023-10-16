@@ -1,4 +1,4 @@
-{% set versions = ['5.2.1'] %}
+{% set versions = ['5.2.3','5.2.1'] %}
 {% set PROGRAM_FILES = '%ProgramFiles(x86)%' %}
 
 resource-hacker:
