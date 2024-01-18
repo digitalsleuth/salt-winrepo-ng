@@ -1,4 +1,4 @@
-{% set versions = [('2022.3','2022.3.1.20')] %}
+{% set versions = [('2023.1','2023.1.1.27'),('2022.3','2022.3.1.20')] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 android-studio:
