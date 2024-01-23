@@ -1,7 +1,7 @@
 {% set versions = ['12.0','11.0'] %}
 
 mdf-viewer:
-{% for version, hash in versions %}
+{% for version in versions %}
   '{{ version }}':
     full_name: 'SysTools SQL MDF Viewer version {{ version }}'
     installer: https://downloads.systoolsgroup.com/mdf-viewer.exe
