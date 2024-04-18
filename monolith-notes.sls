@@ -1,5 +1,5 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['1.0.1'] %}
+{% set versions = ['1.0.2','1.0.1'] %}
 
 monolith-notes:
   {% for version in versions %}
