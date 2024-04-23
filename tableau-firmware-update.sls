@@ -1,11 +1,14 @@
+{% set versions = [('23.4.3','23.4','{88BB6899-2933-435E-B550-A5C05D3BF7BA}'),('22.3.2','22.3','{DEFEA188-DF52-4A89-BED2-AC81335DC30A}')] %}
+
 tableau-firmware-update:
-  '22.3.2':
+{% for long_ver, short_ver, guid in versions %}
+  '{{ long_ver }}':
     full_name: 'Tableau Firmware Update'
-    installer: 'https://mimage.opentext.com/support/ecm/tableau/setup_tableau_firmware_update_22.3.msi'
+    installer: 'https://mimage.opentext.com/support/ecm/tableau/setup_tableau_firmware_update_{{ short_ver }}.msi'
     uninstaller: 'msiexec'            
     install_flags: '/qn /norestart'
-    uninstall_flags: '/qn /x {684C76FB-9B97-46A5-8901-25E17210BE2A} /norestart'
-    source_hash: sha256=72da20b80e25ff34d43c44e7f2844707cf21863d5524885a7cfdff1e2a9f7edf
+    uninstall_flags: '/x {{ guid }} /qn /norestart'
     locale: en_US
-    msiexec: True
+    msiexec: False
     reboot: False
+{% endfor %}
