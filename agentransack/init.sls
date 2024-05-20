@@ -4,7 +4,8 @@
 # - install.cmd
 # - install.ps1
 
-{% set versions = [('9.2.3406.1','3406','{6F40EA5D-AE1B-4F5C-A092-C7AAF0716BEB}'),
+{% set versions = [('9.2.3434.1','3434','{C6A2DC15-7A79-4FE4-90B1-AAE00F96EA1B}'),
+                   ('9.2.3406.1','3406','{6F40EA5D-AE1B-4F5C-A092-C7AAF0716BEB}'),
                    ('9.0.3349.1','3349','{AA12330A-346E-4E81-ADE6-4BCB691A5FFB}')] %}
 
 agentransack:

@@ -1,5 +1,5 @@
 {% set PROGRAM_FILES = 'C:\Program Files' %}
-{% set versions = ['23','7'] %}
+{% set versions = ['24','23','7'] %}
 
 active-disk-editor:
   {% for version in versions %}
