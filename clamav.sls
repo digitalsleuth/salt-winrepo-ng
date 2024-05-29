@@ -1,4 +1,6 @@
-{% set versions = [('1.2.1','{D9F136C1-3691-47E3-9079-4FE9C9010201}')] %}
+{% set versions = [('1.3.1','{D9F136C1-3691-47E3-9079-4FE9C9010201}'),
+                   ('1.2.1','{D9F136C1-3691-47E3-9079-4FE9C9010201}')
+] %}
 
 clamav:
   {% for version, guid in versions %}
