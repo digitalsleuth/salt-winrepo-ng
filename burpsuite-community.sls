@@ -5,14 +5,13 @@
 ] %}
 
 burpsuite-community:
-{% for version, hash in versions %}
+{% for version in versions %}
   '{{ version }}':
     full_name: 'Burp Suite Community Edition {{ version }}'
     installer: 'https://portswigger-cdn.net/burp/releases/download?product=community&version={{ version }}&type=WindowsX64'
     install_flags: '-q'
     uninstaller: '{{ PROGRAM_FILES }}\BurpSuiteCommunity\uninstall.exe'
     uninstall_flags: '-q'
-    source_hash: sha256={{ hash }}
     msiexec: False
     locale: en_US
     reboot: False

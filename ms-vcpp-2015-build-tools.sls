@@ -2,6 +2,7 @@
 # longer hosting the backend files required by the web installer. The second
 # installer in this list installs Visual Studio Build tools 2017 with support
 # for 2015 Build Tools
+# https://visualstudio.microsoft.com/vs/older-downloads/
 {% if grains['cpuarch'] == 'AMD64' %}
     {% set PROGRAM_FILES = "%PROGRAMFILES(x86)%" %}
 {% else %}
