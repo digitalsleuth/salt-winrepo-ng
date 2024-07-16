@@ -1,4 +1,4 @@
-{% set versions = ['12.0','11.0'] %}
+{% set versions = ['13.0','12.0','11.0'] %}
 
 mdf-viewer:
 {% for version in versions %}
