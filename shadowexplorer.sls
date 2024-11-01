@@ -9,4 +9,3 @@ shadowexplorer:
     msiexec: False
     locale: en_US
     reboot: False
-    source_hash: sha256=f81ae34252f9dac08bfee6c4bce5fca99daf0e5fd17a0bc76637d6cbd1c2e875

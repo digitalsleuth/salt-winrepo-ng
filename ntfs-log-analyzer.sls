@@ -1,7 +1,7 @@
-{% set versions = [('1.0', '7066ae3934821553f8db00d5d012f8937c85006d4b230735f9890cff79c461b2')] %}
+{% set versions = ['1.0'] %}
 
 ntfs-log-analyzer:
-{% for version, hash in versions %}
+{% for version in versions %}
   '{{ version }}':
     full_name: 'SysTools NTFS Log Analyzer {{ version }}'
     installer: https://downloads.systoolsgroup.com/ntfs-log-analyzer.exe
@@ -11,5 +11,4 @@ ntfs-log-analyzer:
     msiexec: False
     locale: en_US
     reboot: False
-    source_hash: sha256={{ hash }}
 {% endfor %}

@@ -27,7 +27,6 @@ vs-community-2022:
       --force
       --quiet
       --norestart
-    source_hash: sha256={{ hash }}
     reboot: False
     locale: en_US
 {% endfor %}

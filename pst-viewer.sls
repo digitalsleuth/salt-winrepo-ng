@@ -1,7 +1,7 @@
-{% set versions = [('5.0', '012599f3a3abeca988964dbab47b1c3fb31cfe164d6bf724d406859d785ddab2')] %}
+{% set versions = ['5.0'] %}
 
 pst-viewer:
-{% for version, hash in versions %}
+{% for version in versions %}
   '{{ version }}':
     full_name: 'SysTools Outlook PST Viewer {{ version }}'
     installer: https://downloads.systoolsgroup.com/outlook-pst-viewer.exe
@@ -11,5 +11,4 @@ pst-viewer:
     msiexec: False
     locale: en_US
     reboot: False
-    source_hash: sha256={{ hash }}
 {% endfor %}

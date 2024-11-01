@@ -10,4 +10,3 @@ pdfstreamdumper:
     msiexec: False
     locale: en_US
     reboot: False
-    source_hash: sha256=c26068186f63dcce9cc57502be742c728110eab07570c319a0d7d10587a6e22d

@@ -1,8 +1,8 @@
-{% set versions = [('1.06', 'v106', '9beb3829430836f50ebcdae9fd4f13ae51a41d7900f5e60263960c49a32c11b1')] %}
+{% set versions = [('1.06', 'v106')] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 magnet-chromebook-acquisition:
-{% for version, file_version, hash in versions %}
+{% for version, file_version in versions %}
   '{{ version }}':
     full_name: 'Magnet Chromebook Acquisition Assistant v1 version {{ version }}'
     installer: salt://win/repo-ng/salt-winrepo-ng/files/MCAA_Setup_{{ file_version }}.exe
@@ -12,5 +12,4 @@ magnet-chromebook-acquisition:
     msiexec: False
     locale: en_US
     reboot: False
-    source_hash: sha256={{ hash }}
 {% endfor %}
