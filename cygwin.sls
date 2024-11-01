@@ -9,7 +9,7 @@
 # Mirror choice -O -s https://mirror.csclub.uwaterloo.ca
 {% set versions = ['2.912','2.909'] %}
 cygwin:
-{% for version, hash in versions %}
+{% for version in versions %}
   '{{ version }}':
     full_name: 'Cygwin'
     installer: 'https://cygwin.com/setup-x86_64.exe'
