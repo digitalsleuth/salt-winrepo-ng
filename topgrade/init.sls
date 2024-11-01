@@ -12,7 +12,7 @@ topgrade:
                     ] %}
   '{{ version }}':
     full_name: 'TopGrade'
-    installer: 'salt://win/repo-ng/salt-winrepo-ng/topgrade/install.cmd'
+    installer: 'salt://win/repo-ng/salt-winrepo-ng/_/topgrade/install.cmd'
     install_flags: '"https://github.com/r-darwish/topgrade/releases/download/v{{ version }}/topgrade-v{{version }}-x86_64-pc-windows-msvc.zip" "topgrade-v{{version }}-x86_64-pc-windows-msvc.zip" "{{ version }}"'
     uninstaller: ''
     uninstall_flags: ''

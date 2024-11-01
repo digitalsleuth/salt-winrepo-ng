@@ -35,8 +35,8 @@ filebeat:
 {% for version in versions %}
   '{{ version }}':
     full_name: 'Filebeat {{ version }}'
-    installer: 'salt://win/repo-ng/salt-winrepo-ng/filebeat/install.cmd'
+    installer: 'salt://win/repo-ng/salt-winrepo-ng/_/filebeat/install.cmd'
     install_flags: {{ version }}
-    uninstaller: 'salt://win/repo-ng/salt-winrepo-ng/filebeat/remove.cmd'
+    uninstaller: 'salt://win/repo-ng/salt-winrepo-ng/_/filebeat/remove.cmd'
     cache_dir: True
 {% endfor %}

@@ -14,7 +14,7 @@ agentransack:
 {% for version, subversion, uninstall in versions %}
   '{{ version }}':
     full_name: 'Agent Ransack'
-    installer: 'salt://win/repo-ng/salt-winrepo-ng/agentransack/install.cmd'
+    installer: 'salt://win/repo-ng/salt-winrepo-ng/_/agentransack/install.cmd'
     install_flags: {{ subversion }}
     uninstaller: 'msiexec.exe'
     uninstall_flags: '/x {{ uninstall }} /qn /norestart'

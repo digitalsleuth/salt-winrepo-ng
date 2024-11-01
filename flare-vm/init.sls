@@ -8,7 +8,7 @@
 flare-vm:
   '{{ version }}':
     full_name: 'FLARE-VM'
-    installer: 'salt://win/repo-ng/salt-winrepo-ng/flare-vm/install.cmd'
+    installer: 'salt://win/repo-ng/salt-winrepo-ng/_/flare-vm/install.cmd'
     install_flags: {{ password }}
     cache_dir: True
     locale: en_US

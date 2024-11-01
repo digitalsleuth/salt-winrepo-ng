@@ -30,7 +30,7 @@ erlang:
     uninstaller: '%ProgramFiles%\Erlang OTP\Uninstall.exe'
     uninstall_flags: '/S'
     {% else %}
-    installer: 'salt://win/repo-ng/salt-winrepo-ng/erlang/install.cmd'
+    installer: 'salt://win/repo-ng/salt-winrepo-ng/_/erlang/install.cmd'
     install_flags: '"http://erlang.org/download/otp_win{{ BITS }}_{{ otp_version }}.exe" "otp_win{{ BITS }}_{{ otp_version }}.exe" "{{ otp_version }}" "Erlang OTP {{ otp_version.split('.')[0] }} ({{ erlang_version }})" "/S"'
     {% if major_version >= 23 %}
     uninstaller: '%ProgramFiles%\erl-{{ otp_version }}\Uninstall.exe'

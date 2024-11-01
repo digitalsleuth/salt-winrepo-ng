@@ -22,8 +22,8 @@ pycharm-community:
   '{{ build }}':
     installer: '{{ url }}/pycharm-community-{{ version }}.exe'
     full_name: 'PyCharm Community Edition {{ version }}'
-    install_flags: '/S /CONFIG=C:\ProgramData\Salt Project\Salt\var\cache\salt\minion\files\base\win\repo-ng\salt-winrepo-ng\pycharm-community\silent.config'
-    cache_file: salt://win/repo-ng/salt-winrepo-ng/pycharm-community/silent.config
+    install_flags: '/S /CONFIG=C:\ProgramData\Salt Project\Salt\var\cache\salt\minion\files\base\win\repo-ng\salt-winrepo-ng\_\pycharm-community\silent.config'
+    cache_file: salt://win/repo-ng/salt-winrepo-ng/_/pycharm-community/silent.config
     uninstaller: '{{ PROGRAM_FILES }}\JetBrains\PyCharm Community Edition {{ version }}\bin\Uninstall.exe'
     uninstall_flags: '/S'
     msiexec: False

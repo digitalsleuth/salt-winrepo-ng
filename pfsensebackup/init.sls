@@ -20,9 +20,9 @@ pfsensebackup:
                      '2.5'] %}
   '{{ version }}':
     full_name: 'pfSenseBackup {{ version }}'
-    installer: 'salt://win/repo-ng/salt-winrepo-ng/pfsensebackup/install.cmd'
+    installer: 'salt://win/repo-ng/salt-winrepo-ng/_/pfsensebackup/install.cmd'
     install_flags: '"{{ version }}"'
-    uninstaller: 'salt://win/repo-ng/salt-winrepo-ng/pfsensebackup/remove.cmd'
+    uninstaller: 'salt://win/repo-ng/salt-winrepo-ng/_/pfsensebackup/remove.cmd'
     uninstall_flags: '"{{ version }}"'
     cache_dir: True
   {% endfor %}

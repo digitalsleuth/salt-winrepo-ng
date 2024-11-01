@@ -7,7 +7,7 @@
 zipinstaller:
  '1.21':
    full_name: 'ZipInstaller'
-   installer: 'salt://win/repo-ng/zipinstaller/zipinst.exe'
+   installer: 'salt://win/repo-ng/salt-winrepo-ng/_/zipinstaller/zipinst.exe'
    {% if grains['cpuarch'] == 'AMD64' %}
    install_flags: '/i zipinst_x64.zip'
    {% elif grains['cpuarch'] == 'x86' %}
