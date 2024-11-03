@@ -1,4 +1,4 @@
-{% set versions = ['15.0.0'] %}
+{% set versions = ['21.1.3','15.0.0'] %}
 
 ffdec:
 {% for version in versions %}
