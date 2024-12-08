@@ -1,7 +1,8 @@
 #HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 #Search for Version as DisplayVersion
 
-{% set versions = [('4.0.251.1164','8f185065a223','{BC46C515-A0AA-49DE-A386-81A2800F3C33}'),
+{% set versions = [('4.0.280.1246','494c6e94f1dd','{CD252A8E-ED3D-4B30-9FCB-9C22C303FC75}'),
+                   ('4.0.251.1164','8f185065a223','{BC46C515-A0AA-49DE-A386-81A2800F3C33}'),
                    ('4.0.238.274','9f46b98f55cf','{638F909F-F76E-4CF7-A419-A2A67D6DA2FC}'),
                    ('4.0.231.1071','70472ec6e9d6','{C1B2DF40-A756-47A2-9305-73F9FDA7F4C9}'),
                    ('4.0.200.1093','309b4e16a2e5','{736EA115-11B9-487C-BD17-8AFB1FC150ED}'),
@@ -22,6 +23,8 @@ forensic-email-collector:
   '4.0.231.1072':
   {% elif version == '4.0.251.1164' %}
   '4.0.251.1165':
+  {% elif version == '4.0.280.1246' %}
+  '4.0.280.1247':
   {% else %}
   '{{ version }}':
   {% endif %}
