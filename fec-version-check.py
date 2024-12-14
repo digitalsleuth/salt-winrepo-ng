@@ -2,8 +2,15 @@
 import requests
 from bs4 import BeautifulSoup
 
+current_version = None
+
 url = "https://fec.metaspike.com/announcements"
-current_version = '4.0.280.1246'
+with open('forensic-email-collector.sls', 'r') as state_file:
+    for line in state_file.readlines():
+        if "# current" in line:
+            current_version = line.split(' ')[-1].rstrip()
+            break
+
 response = requests.get(url)
 if response.status_code == 200:
     html_content = response.text
