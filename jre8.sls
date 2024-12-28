@@ -1,5 +1,5 @@
 # http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html
-{% set versions = {'8.0':['3910.13','3610.9']} %}
+{% set versions = {'8.0':['4310.10','3910.13','3610.9']} %}
 
 jre8:
 {% for major, subversions in versions.items() %}

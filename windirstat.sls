@@ -1,15 +1,14 @@
-{% if grains['cpuarch'] == 'AMD64' %}
-    {% set PROGRAM_FILES = "%ProgramFiles(x86)%" %}
-{% else %}
-    {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% endif %}
+{% set versions = [('2.1.1', '{AFE3CAE7-0DF4-4A1A-89B2-967770CB1FEF}')] %}
+
 windirstat:
-  'Not Found':
-    full_name: 'WinDirStat 1.1.2'
-    installer: 'http://download01.windirstat.info/windirstat1_1_2_setup.exe'
-    install_flags: '/S'
-    uninstaller: '{{ PROGRAM_FILES }}\WinDirStat\uninstall.exe'
-    uninstall_flags: '/S'
+  {% for version, guid in versions %}
+  '{{ version }}':
+    full_name: 'WinDirStat'
+    installer: https://github.com/windirstat/windirstat/releases/download/release/v{{ version }}/WinDirStat-x64.msi
+    install_flags: '/qn /norestart'
+    uninstaller: 'msiexec.exe'
+    uninstall_flags: '/x {{ guid }} /qn /norestart'
     msiexec: False
     locale: en_US
     reboot: False
+  {% endfor %}

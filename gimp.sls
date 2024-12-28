@@ -1,7 +1,8 @@
 # just 32-bit x86 installer available
 # Gimp installs into %ProgramFiles on either cpu arch
 gimp:
-  {% for major_version, version, minor_version in [('v2.10', '2.10.30', ''),
+  {% for major_version, version, minor_version in [('v2.10', '2.10.38', '-1'),
+                                                   ('v2.10', '2.10.30', ''),
                                                    ('v2.10', '2.10.22', ''),
                                                    ('v2.10', '2.10.4', '-2'),
                                                    ('v2.8', '2.8.22', ''),
