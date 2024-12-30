@@ -10,9 +10,9 @@ filezilla:
   '{{ version }}':
     full_name: 'FileZilla Client {{ version }}'
     {% if grains['cpuarch'] == 'AMD64' %}
-    installer: 'https://download.filezilla-project.org/client/FileZilla_{{ version }}_win64-setup.exe'
+    installer: 'https://download.filezilla-project.org/client/FileZilla_{{ version }}_win64_sponsored2-setup.exe'
     {% else %}
-    installer: 'https://download.filezilla-project.org/client/FileZilla_{{ version }}_win32-setup.exe'
+    installer: 'https://download.filezilla-project.org/client/FileZilla_{{ version }}_win32_sponsored2-setup.exe'
     {% endif %}
     install_flags: '/S'
     uninstaller: '{{ PROGRAM_FILES }}\FileZilla FTP Client\uninstall.exe'
