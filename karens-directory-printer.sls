@@ -5,8 +5,8 @@
 
 karens-directory-printer:
   {% for version in versions %}
-  '{{ version }}':
-    full_name: "Karen's Directory Printer {{ version }}.0"
+  '{{ version }}.0':
+    full_name: "Karen's Directory Printer"
     installer: https://www.karenware.com/d/Karens-Directory-Printer-v{{ version }}-Setup.exe
     install_flags: /S
     uninstaller: "{{ PROGRAM_FILES }}\\Karen's Power Tools\\Directory Printer\\uninstall.exe"
