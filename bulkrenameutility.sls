@@ -1,7 +1,7 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 bulkrenameutility:
-  {% for version in ['4.0.0.2', '3.4.4.0', '3.0.0.1'] %}
+  {% for version in ['4.0.0.3', '4.0.0.2', '3.4.4.0', '3.0.0.1'] %}
   '{{ version }}':
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Bulk Rename Utility {{ version }} (64-bit)'
