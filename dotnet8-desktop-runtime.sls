@@ -1,7 +1,6 @@
-{% set versions = [('6.0.36','34217','f6b6c5dc-e02d-4738-9559-296e938dabcb','b66d365729359df8e8ea131197715076'),
-                   ('6.0.7','31422','dc0e0e83-0115-4518-8b6a-590ed594f38a','65b63e41f6a80decb37fa3c5af79a53d')] %}
+{% set versions = [('8.0.11','34221','27bcdd70-ce64-4049-ba24-2b14f9267729','d4a435e55182ce5424a7204c2cf2b3ea')] %}
 
-dotnet6-desktop-runtime:
+dotnet8-desktop-runtime:
   {% for version, subversion, guid, hash in versions %}
   '{{ version}}.{{ subversion }}':
     full_name: 'Microsoft Windows Desktop Runtime - {{ version }} (x64)'
