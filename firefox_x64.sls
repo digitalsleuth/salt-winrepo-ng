@@ -12,7 +12,8 @@
 {%- set lang = salt['config.get']('firefox:pkg:lang', 'en-US') %}
 
 firefox_x64:
-  {% for version in ['118.0.1',
+  {% for version in ['133.0.3',
+                     '118.0.1',
                      '107.0.1',
                      '101.0.1',
                      '95.0',

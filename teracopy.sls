@@ -1,4 +1,6 @@
-{% set versions = [('3.12','{814A9D93-2A41-4A6A-AD60-36651434AF1F}'),('3.10','{3B52584E-B01A-456B-A6D9-A2135F8B1E98}')] %}
+{% set versions = [('3.17','{DF5325DF-1F43-4282-85D5-1CA3353E6B13}'),
+                   ('3.12','{814A9D93-2A41-4A6A-AD60-36651434AF1F}'),
+                   ('3.10','{3B52584E-B01A-456B-A6D9-A2135F8B1E98}')] %}
 
 teracopy:
 {% for version, uninstall in versions %}
