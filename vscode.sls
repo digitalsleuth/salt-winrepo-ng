@@ -1,5 +1,6 @@
 {% set program_files = '%ProgramFiles%' %}
 {% set versions = [
+        ('1.96.3', '91fbdddc47bc9c09064bf7acf133d22631cbf083'),
         ('1.82.3', 'fdb98833154679dbaa7af67a5a29fe19e55c2b73'),
         ('1.73.1', '6261075646f055b99068d3688932416f2346dd3b'),
         ('1.63.1', 'fe719cd3e5825bf14e14182fddeb88ee8daf044f'),
@@ -17,11 +18,7 @@ vscode:
   {% for version, guid in versions %}
   '{{ version }}':
     full_name: 'Microsoft Visual Studio Code'
-    {% if grains['cpuarch'] == 'AMD64' %}
-    installer: 'https://az764295.vo.msecnd.net/stable/{{ guid }}/VSCodeSetup-x64-{{ version }}.exe'
-{% else %}
-    installer: 'https://az764295.vo.msecnd.net/stable/{{ guid }}/VSCodeSetup-ia32-{{ version }}.exe'
-{% endif %}
+    installer: 'https://vscode.download.prss.microsoft.com/dbazure/download/stable/{{ guid }}/VSCodeSetup-x64-{{ version }}.exe'
     uninstaller: '{{ program_files }}\Microsoft VS Code\unins000.exe'
     install_flags: '/SP- /VERYSILENT /NORESTART /MERGETASKS=!RUNCODE,ADDCONTEXTMENUFILES,ADDCONTEXTMENUFOLDERS,ADDTOPATH'
     uninstall_flags: '/VERYSILENT /NORESTART'
