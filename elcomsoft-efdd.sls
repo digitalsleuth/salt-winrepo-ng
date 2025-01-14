@@ -1,13 +1,13 @@
-{% set versions = ['2.20.1011.6893','2.19.999.6400'] %}
+{% set versions = [('2.21.1024.8145','{F1C36140-CAD1-4A57-8871-E6A2E99D80E9}')] %}
 
 elcomsoft-efdd:
-{% for version in versions %}
+{% for version, guid in versions %}
   '{{ version }}':
     full_name: 'Elcomsoft Forensic Disk Decryptor'
     installer: 'https://www.elcomsoft.com/download/efdd_setup_en.msi'
-    install_flags: '/qn /norestart'
-    uninstaller: 'https://www.elcomsoft.com/download/efdd_setup_en.msi'
-    uninstall_flags: '/quiet /norestart'
+    install_flags: '/quiet /norestart'
+    uninstaller: 'msiexec.exe'
+    uninstall_flags: '/x {{ guid }} /quiet /norestart'
     msiexec: True
     locale: en_US
     reboot: False
