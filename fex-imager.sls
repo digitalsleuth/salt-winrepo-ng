@@ -1,4 +1,4 @@
-{% set versions = ['2.2.1.283'] %}
+{% set versions = ['2.2.1.304','2.2.1.283'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 fex-imager:
