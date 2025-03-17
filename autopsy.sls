@@ -1,4 +1,4 @@
-{% set versions = ['4.21.0','4.20.0','4.19.3','4.19.2'] %}
+{% set versions = ['4.22.0','4.21.0','4.20.0','4.19.3','4.19.2'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 autopsy:
