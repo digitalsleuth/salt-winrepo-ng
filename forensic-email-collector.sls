@@ -1,6 +1,6 @@
 #HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 #Search for Version as DisplayVersion
-# current = 4.0.346.1211
+# current = 4.1.423.1108
 
 {% set versions = [('4.1.423.1108','d3187a9db3b8','{A5607B2A-6962-4A78-B57C-9F420247B038}'),
                    ('4.0.346.1211','e04910e25306','{1E651F8E-5C52-44E8-98E3-9BBBDF942F96}'),
