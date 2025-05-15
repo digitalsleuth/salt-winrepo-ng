@@ -27,7 +27,7 @@ if response.status_code == 200:
                 if posted_version != current_version:
                     print(f"New FEC version released: {posted_version}")
                     raise SystemExit(1)
-                print("No FEC version update found.")
+                print(f"No FEC version update found - posted version: {posted_version}")
                 raise SystemExit(0)
     print("No FEC release announcement found.")
 else:
