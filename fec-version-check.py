@@ -13,20 +13,22 @@ with open('forensic-email-collector.sls', 'r') as state_file:
 
 response = requests.get(url)
 if response.status_code == 200:
-    html_content = response.text
     soup = BeautifulSoup(html_content, 'html.parser')
-    link = soup.find('a', href=lambda href: href and href.startswith('/announcements/'))
-    if link:
-        h1 = link.find_next('h1')
-        if h1:
-            posted_version = h1.text.strip()
-            if posted_version != current_version:
-                print(f"New version released: {posted_version}")
-                raise SystemExit(1)
-            else:
-                print("No version update found.")
-                raise SystemExit(0)
-    else:
-        print("No version information found for FEC.")
+    for article in articles:
+        label_div = article.find("div", string=lambda s: s and s.strip() == "FEC Release")
+        if not label_div:
+            continue
+        version_tag = article.find("a")
+        if version_tag:
+            h1 = version_tag.find("h1")
+            if h1:
+                posted_version = h1.text.strip()
+                if posted_version != current_version:
+                    print(f"New FEC version released: {posted_version}")
+					raise SystemExit(1)
+                else:
+                    print("No FEC version update found.")
+                    raise SystemExit(0)
+    print("No FEC release announcement found.")
 else:
     print(f"Failed to retrieve the webpage - Response code: {response.status_code}")
