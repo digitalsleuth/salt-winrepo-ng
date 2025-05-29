@@ -24,3 +24,10 @@ ms-vcpp-2015-build-tools:
     uninstaller: https://aka.ms/vs/15/release/vs_buildtools.exe
     uninstall_flags: 'uninstall --wait --quiet --installPath "{{ PROGRAM_FILES }}\Microsoft Visual Studio\2017\BuildTools"'
     reboot: False
+  '15.9.36101.55':
+    full_name: 'Visual Studio Build Tools 2017'
+    installer: https://aka.ms/vs/15/release/vs_buildtools.exe
+    install_flags: '--wait --quiet --add Microsoft.VisualStudio.Workload.MSBuildTools --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Component.Windows81SDK --add Microsoft.VisualStudio.Component.VC.140 --add Microsoft.Component.VC.Runtime.UCRTSDK'
+    uninstaller: https://aka.ms/vs/15/release/vs_buildtools.exe
+    uninstall_flags: 'uninstall --wait --quiet --installPath "{{ PROGRAM_FILES }}\Microsoft Visual Studio\2017\BuildTools"'
+    reboot: False
