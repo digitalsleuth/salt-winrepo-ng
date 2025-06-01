@@ -1,4 +1,4 @@
-{% set versions = ['0.79','0.78','0.77'] %}
+{% set versions = ['0.83','0.79','0.78','0.77'] %}
 putty:
   {% for version in versions %}
   '{{ version }}.0.0':
