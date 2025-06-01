@@ -1,6 +1,6 @@
-{% set versions = [('8.0.11','34221')] %}
+{% set versions = [('9.0.5','34816')] %}
 
-dotnet8-desktop-runtime:
+dotnet9-desktop-runtime:
   {% for version, subversion in versions %}
   '{{ version }}.{{ subversion }}':
     full_name: 'Microsoft Windows Desktop Runtime - {{ version }} (x64)'
