@@ -1,4 +1,6 @@
-{% set versions = [('21.0.1','{75B0E1AE-DC20-5AC0-A358-61B0256DADBE}')] %}
+{% set versions = [('21.0.7','{E4AD9691-F2C7-5AC4-8795-3330B2AB4CC3}'),
+                   ('21.0.1','{75B0E1AE-DC20-5AC0-A358-61B0256DADBE}'),
+] %}
 
 jdk21:
 {% for version, guid in versions %}
