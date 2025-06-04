@@ -1,4 +1,4 @@
-{% set versions = ['1.3.0'] %}
+{% set versions = ['1.18.0','1.3.0'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 zui:

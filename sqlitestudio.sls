@@ -1,5 +1,5 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['3.4.4','3.4.1'] %}
+{% set versions = ['3.4.17','3.4.4','3.4.1'] %}
 
 sqlitestudio:
   {% for version in versions %}

@@ -1,4 +1,6 @@
-{% set versions = [('8.1.1', '8.1.1.7464', '{A12FDAB1-731B-4A98-9749-D4813EA6AC74}')] %}
+{% set versions = [('9.1', '9.1.0.7988', '{A12FDAB1-731B-4A98-9749-D4815E96A1E0}'),
+                   ('8.1.1', '8.1.1.7464', '{A12FDAB1-731B-4A98-9749-D4813EA6AC74}'),
+] %}
 
 ilspy:
   {% for version, subversion, uninstall in versions %}

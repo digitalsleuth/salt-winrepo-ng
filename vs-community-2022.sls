@@ -1,5 +1,6 @@
 # Short URL for installer: https://aka.ms/vs/17/release/vs_community.exe
-{% set versions = [('17.7.5', '8bee1b10-0767-416b-a3c0-d658a719947b', 'ec86fed16b3a3eb9ee0e5a4286d5edc6cdcecaf90c10833bc4ab9668d5bf9cdc'),
+{% set versions = [('17.14.4', '94bbe6f9-0426-4afe-b73c-fbc458070e33','9cb02802530e36d67736f0e770025c782327b89ce1145ff580028f081d4d1f49'),
+                   ('17.7.5', '8bee1b10-0767-416b-a3c0-d658a719947b', 'ec86fed16b3a3eb9ee0e5a4286d5edc6cdcecaf90c10833bc4ab9668d5bf9cdc'),
                    ('17.7.1', 'cda788db-d262-4261-ac9e-064293a93399', '1ca4e457b7ecf0a5a04e5eb8eedd93b93f641ea6306e66ca5432911043a71369'),
                    ('17.6.4', '33081bfc-10f1-42d4-8f5a-df6709b8b105', '0b11ab6a0bc941b3968f666ac9ae26e257758ae8ae408bbe3118a341ac8816f3'),
                    ('17.5.4', '50042acc-a12d-4dfe-a272-b109b15b7cd6', '7d5d17810a78ef3598e755c943a94273e47ce0345a231c48f00b48d213256094'),

@@ -1,4 +1,6 @@
-{% set versions = [('0.11.6','58fe816db3','{A05A280B-4A30-455F-BD6B-846A135F66C2}')] %}
+{% set versions = [('0.12.0','99a6fb0170','{B68210A3-B0D7-42D4-B0E0-4E8A653BADBD}'),
+                   ('0.11.6','58fe816db3','{A05A280B-4A30-455F-BD6B-846A135F66C2}')
+] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 reko:

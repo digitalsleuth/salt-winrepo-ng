@@ -1,5 +1,6 @@
 {% set program_files = '%ProgramFiles%' %}
 {% set versions = [
+        ('1.100.3','258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3'),
         ('1.96.3', '91fbdddc47bc9c09064bf7acf133d22631cbf083'),
         ('1.82.3', 'fdb98833154679dbaa7af67a5a29fe19e55c2b73'),
         ('1.73.1', '6261075646f055b99068d3688932416f2346dd3b'),

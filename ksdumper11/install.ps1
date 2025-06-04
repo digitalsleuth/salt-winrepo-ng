@@ -12,7 +12,7 @@ $script_path = $script_path.DirectoryName
 
 # Define variables
 $base_url="https://github.com/mastercodeon314/KsDumper-11/releases/download/"
-$filename = "KsDumper11.zip"
+$filename = "KsDumper11.v$version.zip"
 $url = "$base_url/$version/$filename"
 $zip_file = "$script_path\$filename"
 $date = Get-Date -Format "yyyyMMdd"
