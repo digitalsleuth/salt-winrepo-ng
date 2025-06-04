@@ -1,4 +1,4 @@
-{% set versions = [('1.7', '{1775ACB1-6D62-3C64-BF6A-D59F8AFFF461}'] %}
+{% set versions = [('1.7', '{1775ACB1-6D62-3C64-BF6A-D59F8AFFF461}')] %}
 
 itunes-backup-explorer:
 {% for version, guid in versions %}
