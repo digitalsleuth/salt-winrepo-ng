@@ -12,7 +12,7 @@
 virtualbox:
 {% for version, build_number, guid in versions %}
   '{{ version }}':
-    full_name: 'Oracle VM VirtualBox {{ version }}'
+    full_name: 'Oracle VirtualBox {{ version }}'
     installer: '{{ source_path}}{{ version }}/VirtualBox-{{ version }}-{{ build_number }}-Win.exe'
     install_flags: '--silent'
     uninstaller: 'msiexec.exe'
