@@ -4,7 +4,7 @@ irfanview-plugins:
 {% for version in versions %}
   {% set dotless_version = version | replace(".","") %}
   '{{ version }}':
-    full_name: 'Irfanview Plugins {{ version }}'
+    full_name: 'IrfanView Plugins {{ version }}'
     installer: https://download.betanews.com/download/1099412658-1/iview{{ dotless_version }}_plugins_x64_setup.exe
     install_flags: '/silent'
     uninstaller: ''
