@@ -1,4 +1,4 @@
-{% set versions = ['5.3.7','5.3.6'] %}
+{% set versions = ['5.3.8','5.3.7','5.3.6'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 powergrep:
