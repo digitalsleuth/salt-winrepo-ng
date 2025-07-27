@@ -23,7 +23,7 @@ forensic-email-collector:
   {% for version, folder_hash, uninstall_string in versions %}
   {% if version == '4.1.507.1116' %}
   '4.1.507.1117':
-  {% if version == '4.0.167.1390' %}
+  {% elif version == '4.0.167.1390' %}
   '4.0.167.1391':
   {% elif version == '4.0.200.1093' %}
   '4.0.200.1094':
