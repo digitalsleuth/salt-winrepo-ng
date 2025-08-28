@@ -1,4 +1,4 @@
-{% set versions = ['1.1.4'] %}
+{% set versions = ['1.1.6','1.1.4'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 hax:
