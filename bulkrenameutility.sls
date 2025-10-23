@@ -8,7 +8,7 @@ bulkrenameutility:
     {% else %}
     full_name: 'Bulk Rename Utility {{ version }} (32-bit)'
     {% endif %}
-    installer: 'https://www.bulkrenameutility.co.uk/Downloads/BRU_setup.exe'
+    installer: 'https://www.s3.tgrmn.com/bru4/BRU_setup_{{ version }}.exe'
     install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: '{{ PROGRAM_FILES }}\Bulk Rename Utility\unins000.exe'
     uninstall_flags: '/VERYSILENT  /SUPPRESSMSGBOXES /NORESTART /SP-'
