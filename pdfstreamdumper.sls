@@ -3,7 +3,7 @@
 pdfstreamdumper:
   '0.9.634':
     full_name: 'PDFStreamDumper 0.9.5xx'
-    installer: http://sandsprite.com/CodeStuff/PDFStreamDumper_Setup.exe
+    installer: https://sandsprite.com/CodeStuff/PDFStreamDumper_Setup.exe
     install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE /DIR="{{ PROGRAM_FILES }}\PDFStreamDumper"'
     uninstaller: '{{ PROGRAM_FILES }}\PDFStreamDumper\unins000.exe'
     uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
