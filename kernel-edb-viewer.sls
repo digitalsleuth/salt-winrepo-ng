@@ -1,8 +1,8 @@
 {% set PROGRAM_FILES = 'C:\Program Files (x86)' %}
 
 kernel-edb-viewer:
-  '15.9':
-    full_name: 'Kernel Exchange EDB Viewer ver 15.9'
+  '23.2':
+    full_name: 'Kernel for Exchange Server ver 23.2'
     installer: 'https://www.nucleustechnologies.com/downloads/exchange-edb-viewer.exe'
     install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE'
     uninstaller: '{{ PROGRAM_FILES }}\Kernel Exchange EDB Viewer\unins000.exe'

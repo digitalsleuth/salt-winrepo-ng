@@ -1,4 +1,4 @@
-{% set versions = [('7.3.6.9345','7.3.6','{F27DBA46-80E1-4858-9285-19198FFFBF3D}'), ('7.3.4.8642','7.3.4','{D9EF644E-2FAE-493B-8180-5617CC774C4F}')] %}
+{% set versions = [('7.3.6.10441','7.3.6','{8D42B7EA-0BF8-4E13-B646-652FE578F998}'), ('7.3.6.9345','7.3.6','{F27DBA46-80E1-4858-9285-19198FFFBF3D}'), ('7.3.4.8642','7.3.4','{D9EF644E-2FAE-493B-8180-5617CC774C4F}')] %}
 
 google-earth-pro:
 {% for full_version, short_version, uninstall in versions %}

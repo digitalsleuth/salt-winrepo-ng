@@ -6,7 +6,7 @@ irfanview:
   {% set dotless_version = version | replace(".","") %}
   '{{ version }}':
     full_name: 'IrfanView {{ version }} (64-bit)'
-    installer: https://download.betanews.com/download/967963863-1/iview{{ dotless_version }}_x64_setup.exe
+    installer: https://download.fileforum.com/download/967963863-1/iview{{ dotless_version }}_x64_setup.exe
     install_flags: '/silent /desktop=0 /thumbs=0 /group=1 /allusers=1 /assoc=1'
     uninstaller: '{{ PROGRAM_FILES }}\IrfanView\iv_uninstall.exe'
     uninstall_flags: '/silent'
