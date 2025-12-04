@@ -1,4 +1,4 @@
-{% set versions = ['4.72','4.62','4.60','4.59'] %}
+{% set versions = ['4.73','4.72','4.62','4.60','4.59'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 irfanview:

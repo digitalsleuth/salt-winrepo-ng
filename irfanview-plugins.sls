@@ -1,10 +1,10 @@
-{% set versions = ['4.72','4.62','4.60','4.59'] %}
+{% set versions = ['4.73','4.72','4.62','4.60','4.59'] %}
 
 irfanview-plugins:
 {% for version in versions %}
   {% set dotless_version = version | replace(".","") %}
   '{{ version }}':
-    full_name: 'IrfanView Plugins {{ version }}'
+    full_name: ''
     installer: https://download.fileforum.com/download/1099412658-1/iview{{ dotless_version }}_plugins_x64_setup.exe
     install_flags: '/silent'
     uninstaller: ''
