@@ -1,6 +1,6 @@
 # Unable to completely perform a silent uninstall at this time as it is a restriction of the software
 
-{% set versions = ['9.6.1','9.6.0','9.5.1','9.5','9.4.2','9.4.1','9.4','9.3'] %}
+{% set versions = ['9.6.2','9.6.1','9.6.0','9.5.1','9.5','9.4.2','9.4.1','9.4','9.3'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 treesize-pro:
