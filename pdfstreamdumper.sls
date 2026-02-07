@@ -1,9 +1,10 @@
 # InnoSetup
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
+{% set version = "0.9.634" %}
 pdfstreamdumper:
-  '0.9.634':
+  '{{ version }}':
     full_name: 'PDFStreamDumper 0.9.5xx'
-    installer: https://sandsprite.com/CodeStuff/PDFStreamDumper_Setup.exe
+    installer: salt://win/repo-ng/salt-winrepo-ng/_/files/PDFStreamDumper_Setup_{{ version }}.exe
     install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /MERGETASKS=!DESKTOPICON,!RUNCODE /DIR="{{ PROGRAM_FILES }}\PDFStreamDumper"'
     uninstaller: '{{ PROGRAM_FILES }}\PDFStreamDumper\unins000.exe'
     uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
