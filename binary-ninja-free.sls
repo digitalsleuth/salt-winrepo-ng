@@ -1,4 +1,4 @@
-{% set versions = ['5.1.8104'] %}
+{% set versions = ['5.2.8722'] %}
 
 binary-ninja-free:
 {% for version in versions %}
