@@ -11,7 +11,7 @@ $script_path = dir "$($myInvocation.MyCommand.Definition)"
 $script_path = $script_path.DirectoryName
 
 # Define variables
-$base_url="https://github.com/mastercodeon314/KsDumper-11/releases/download/"
+$base_url="https://github.com/mastercodeon31415/KsDumper-11/releases/download/"
 $filename = "KsDumper11.v$version.zip"
 $url = "$base_url/$version/$filename"
 $zip_file = "$script_path\$filename"
@@ -33,12 +33,6 @@ if ($PSVersionTable.PSVersion.Major -ge 5) {
     $Shell.Namespace($env:ProgramFiles).copyhere($Shell.NameSpace($zip_file).Items(), 4)
 }
 
-# Rename the directory
-# Rename-Item -Path "$env:ProgramFiles\winlogbeat-$version-windows-x86_64" -NewName "Winlogbeat"
-
-# Install the winlogbeat service
-#& "$env:ProgramFiles\Winlogbeat\install-service-winlogbeat.ps1" | Out-Null
-
 # Calculate installation size
 $size = (Get-ChildItem "$env:ProgramFiles\KsDumper11" | Measure Length -Sum).Sum /1KB
 
@@ -47,6 +41,6 @@ New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" -Name
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KsDumper11" -Name "DisplayName" -Value "KsDumper 11 $version" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KsDumper11" -Name "DisplayVersion" -Value "$version" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KsDumper11" -Name "UninstallString" -Value "Managed by Salt" | Out-Null
-New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KsDumper11" -Name "Publisher" -Value "mastercodeon314" | Out-Null
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KsDumper11" -Name "Publisher" -Value "mastercodeon31415" | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KsDumper11" -Name "InstallDate" -Value $date | Out-Null
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KsDumper11" -Name "EstimatedSize" -Value $size -PropertyType "DWord" | Out-Null

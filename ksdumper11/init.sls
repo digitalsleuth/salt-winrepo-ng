@@ -5,7 +5,7 @@
 # - install.ps1
 # - remove.cmd
 
-{% set versions = ['1.3.4'] %}
+{% set versions = ['1.3.5H'] %}
 
 ksdumper11:
 {% for version in versions %}
