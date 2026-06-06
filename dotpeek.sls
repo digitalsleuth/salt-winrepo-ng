@@ -1,4 +1,4 @@
-{% set versions = ['2025.1.2'] %}
+{% set versions = ['2026.1.2','2025.1.2'] %}
 
 dotpeek:
 {% for version in versions %}
