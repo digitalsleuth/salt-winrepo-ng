@@ -1,4 +1,5 @@
-{% set versions = [('1.26.24','{9EBED8F8-BD2F-4561-B5A3-628A8815F51F}'),
+{% set versions = [('1.26.29','{0F25FB8F-24DC-418E-8E5D-015D9CB5F4C0}'),
+                   ('1.26.24','{9EBED8F8-BD2F-4561-B5A3-628A8815F51F}'),
                    ('1.26.7','{9B45D139-7451-4C93-B694-4AFDCBA4A03D}'),
                    ('1.25.9','{E254AA9E-A48A-4A92-AF75-E6FF77C1A915}'),
 ] %}
@@ -7,7 +8,7 @@ veracrypt:
 {% for version, uninstall in versions %}
   '{{ version }}':
     full_name: 'VeraCrypt {{ version }}'
-    installer: 'https://launchpad.net/veracrypt/trunk/{{ version }}/+download/VeraCrypt_Setup_x64_{{ version }}.msi'
+    installer: 'https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_{{ version }}/VeraCrypt_Setup_x64_{{ version }}.msi'
     install_flags: '/qn /norestart ACCEPTLICENSE=YES INSTALLDESKTOPSHORTCUT=""'
     uninstaller: 'msiexec'
     uninstall_flags: '/x {{ uninstall }} /qn /norestart'

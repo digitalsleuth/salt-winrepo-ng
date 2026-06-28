@@ -1,4 +1,5 @@
-{% set versions = [('0.12.0','99a6fb0170','{B68210A3-B0D7-42D4-B0E0-4E8A653BADBD}'),
+{% set versions = [('0.12.3','f6a16a2abd','{81B2ADE0-C5A3-4B37-92EA-2F1B8DF79DF5}'),
+                   ('0.12.0','99a6fb0170','{B68210A3-B0D7-42D4-B0E0-4E8A653BADBD}'),
                    ('0.11.6','58fe816db3','{A05A280B-4A30-455F-BD6B-846A135F66C2}')
 ] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}

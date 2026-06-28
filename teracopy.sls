@@ -1,4 +1,5 @@
-{% set versions = [('3.17','{DF5325DF-1F43-4282-85D5-1CA3353E6B13}'),
+{% set versions = [('4.0.0.27','{3123B459-E920-4FC3-8E36-EAD2347C1826}'),
+                   ('3.17','{DF5325DF-1F43-4282-85D5-1CA3353E6B13}'),
                    ('3.12','{814A9D93-2A41-4A6A-AD60-36651434AF1F}'),
                    ('3.10','{3B52584E-B01A-456B-A6D9-A2135F8B1E98}')] %}
 
@@ -6,8 +7,8 @@ teracopy:
 {% for version, uninstall in versions %}
   '{{ version }}':
     full_name: 'TeraCopy'
-    installer: 'https://codesector.nyc3.cdn.digitaloceanspaces.com/teracopy.exe'
-    install_flags: '/quiet'
+    installer: 'https://codesector.nyc3.cdn.digitaloceanspaces.com/teracopy{{ version }}.exe'
+    install_flags: '/exenoupdates /quiet'
     uninstaller: 'msiexec.exe'
     uninstall_flags: '/q /x {{ uninstall }} /norestart'
     msiexec: False
