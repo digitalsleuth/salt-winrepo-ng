@@ -1,0 +1,13 @@
+{% set versions = [()] %}
+
+<pkg>:
+  {% for version in versions %}
+  '{{ version }}':
+    full_name: ''
+    installer: 
+    install_flags: ''
+    uninstaller: ''
+    uninstall_flags: ''
+    locale: en_US
+    reboot: False
+  {% endfor %}
