@@ -6,7 +6,7 @@ winmerge:
     {% if version.count('.') == 2 %}
     full_name: 'WinMerge {{ version }}.0 x64'
     {% else %}
-    full_name: 'WinMerge {{ version }} x64'
+    full_name: 'WinMerge x64'
     {% endif %}
     installer: 'https://github.com/WinMerge/winmerge/releases/download/v{{ version }}/WinMerge-{{ version }}-x64-Setup.exe'
     install_flags: '/SP- /VERYSILENT /NORESTART /MERGETASKS=!DESKTOPICON,!RUNCODE'
