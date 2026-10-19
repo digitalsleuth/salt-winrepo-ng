@@ -1,5 +1,5 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['4.0.0'] %}
+{% set versions = ['4.0.4','4.0.0'] %}
 
 letos:
   {% for version in versions %}

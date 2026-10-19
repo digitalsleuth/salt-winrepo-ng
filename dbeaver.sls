@@ -1,5 +1,6 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['25.2.4','25.1.0',
+{% set versions = ['26.2.3',
+                   '25.2.4','25.1.0',
                    '24.0.5',
                    '23.2.1',
                    '22.2.5','22.2.4','22.2.3','22.2.2','22.2.1','22.2.0',
@@ -14,7 +15,11 @@ dbeaver:
   {% for version in versions %}
   '{{ version }}':
     full_name: 'DBeaver {{ version }}'
+    {% if version.startswith('26') %}
+    installer: 'https://github.com/dbeaver/dbeaver/releases/download/{{ version }}/dbeaver-ce-{{ version }}-windows-x86_64.exe'
+    {% else %}
     installer: 'https://github.com/dbeaver/dbeaver/releases/download/{{ version }}/dbeaver-ce-{{ version }}-x86_64-setup.exe'
+    {% endif %}
     install_flags: '/S /allusers'
     uninstaller: '{{ PROGRAM_FILES }}\DBeaver\Uninstall.exe'
     uninstall_flags: '/S /allusers'
