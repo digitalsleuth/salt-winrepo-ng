@@ -29,7 +29,7 @@ free-hex-editor-neo:
 {% for long, short in versions %}
   '{{ long }}':
     full_name: "HHD Software Free Hex Editor Neo {{ short }}"
-    installer: https://www.hhdsoftware.com/download/free-hex-editor-neo.exe
+    installer: https://hhdsoftware.com/download/free-hex-editor-neo.exe
     install_flags: -silent -machine
     uninstaller: 'C:\Program Files\HHD Software\Hex Editor Neo\Setup\setup.exe'
     uninstall_flags: -uninstall -silent
