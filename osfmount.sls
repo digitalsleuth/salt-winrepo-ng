@@ -1,4 +1,4 @@
-{% set versions = ['v3.1'] %}
+{% set versions = ['3.3.1000.0','v3.1'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 osfmount:
