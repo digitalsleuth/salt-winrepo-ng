@@ -1,5 +1,5 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['26.2.3',
+{% set versions = ['26.2.4','26.2.3',
                    '25.2.4','25.1.0',
                    '24.0.5',
                    '23.2.1',
