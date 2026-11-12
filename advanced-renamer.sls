@@ -1,5 +1,5 @@
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% set versions = ['4.06'] %}
+{% set versions = ['4.28','4.06'] %}
 
 advanced-renamer:
   {% for version in versions %}
