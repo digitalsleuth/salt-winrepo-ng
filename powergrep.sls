@@ -4,7 +4,7 @@
 powergrep:
   {% for version in versions %}
   'DEMO {{ version }}':
-    full_name: 'PowerGREP 5 DEMO {{ version }}'
+    full_name: 'PowerGREP 5'
     installer: https://download.jgsoft.com/powergrep/SetupPowerGREPDemo.exe
     install_flags: /S
     uninstaller: '{{ PROGRAM_FILES }}\Just Great Software\PowerGREP 5\UnDeploy64.exe'
