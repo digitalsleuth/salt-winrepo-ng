@@ -1,4 +1,4 @@
-{% set versions = ['5.5'] %}
+{% set versions = ['5.8','5.5'] %}
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
 
 isobuster:
