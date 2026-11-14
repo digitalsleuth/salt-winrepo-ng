@@ -1,6 +1,6 @@
 # Unfortunately, there is no silent uninstall
 
-{% set versions = ['2021.10.9'] %}
+{% set versions = ['2026.4.9','2021.10.9'] %}
 {% set PROGRAM_FILES = "%ProgramFiles(x86)%" %}
 
 hfs-explorer:
