@@ -6,8 +6,8 @@ elcomsoft-efdd:
     full_name: 'Elcomsoft Forensic Disk Decryptor'
     installer: 'https://www.elcomsoft.com/download/efdd_setup_en.msi'
     install_flags: '/quiet /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /quiet /norestart'
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/quiet /norestart'
     msiexec: True
     locale: en_US
     reboot: False

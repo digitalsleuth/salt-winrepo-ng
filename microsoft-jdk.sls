@@ -10,9 +10,9 @@ microsoft-jdk:
   '{{ version }}':
     full_name: 'Microsoft Build of OpenJDK with Hotspot {{ disp_version }} ({{ arch }})'
     installer:   '{{source_path}}/microsoft-jdk-{{ version }}-windows-{{ arch }}.msi'
-    uninstaller: 'msiexec'
+    uninstaller: '{{ guid }}'
     install_flags:   '/qn /norestart'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
+    uninstall_flags: '/qn /norestart'
     msiexec: True
     locale: en_US
     reboot: False

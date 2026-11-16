@@ -8,9 +8,9 @@ duplicate-cleaner:
     full_name: 'Duplicate Cleaner Pro {{ version }}.{{ subversion }}'
     installer: https://www.digitalvolcano.co.uk/download/DuplicateCleaner-Setup-{{ version }}.msi
     install_flags: '/qn ALLUSERS=1 /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
-    msiexec: False
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
   {% endfor %}

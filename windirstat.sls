@@ -6,9 +6,9 @@ windirstat:
     full_name: 'WinDirStat'
     installer: https://github.com/windirstat/windirstat/releases/download/release/v{{ version }}/WinDirStat-x64.msi
     install_flags: '/qn /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
-    msiexec: False
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
   {% endfor %}

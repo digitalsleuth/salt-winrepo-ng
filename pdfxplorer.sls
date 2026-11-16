@@ -6,9 +6,9 @@ pdfxplorer:
     full_name: PDFXplorer {{ version }}
     installer: https://pdfxplorer.dev/download/PDF4DEV.Applications.PDFXplorer.{{ version }}.msi
     install_flags: '/qn /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
-    msiexec: False
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
   {% endfor %}

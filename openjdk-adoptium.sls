@@ -4,10 +4,11 @@ openjdk-adoptium:
   {% for version, subversion, guid in versions %}
   '{{ version }}.{{ subversion }}':
     full_name: 'Eclipse Temurin JDK with Hotspot {{ version }}+{{ subversion }} (x64)'
-    installer: https://github.com/adoptium/temurin21-binaries/releases/download/jdk-{{ version }}%2B{{ subversion }}/OpenJDK21U-jdk_x64_windows_hotspot_{{ version }}_{{ subversion }}.msi
+    installer: 'https://github.com/adoptium/temurin21-binaries/releases/download/jdk-{{ version }}%2B{{ subversion }}/OpenJDK21U-jdk_x64_windows_hotspot_{{ version }}_{{ subversion }}.msi'
     install_flags: '/qn /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
   {% endfor %}

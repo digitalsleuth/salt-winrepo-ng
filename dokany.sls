@@ -9,8 +9,8 @@ dokany:
     full_name: 'Dokan Library {{ version }} (x64)'
     installer: https://github.com/dokan-dev/dokany/releases/download/v{{ version }}/Dokan_x64.msi
     install_flags: '/qn /norestart'
-    uninstaller: 'msiexec'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
-    msiexec: False
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     reboot: False
   {% endfor %}

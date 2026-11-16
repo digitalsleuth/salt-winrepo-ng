@@ -6,8 +6,9 @@ openjre-adoptium:
     full_name: 'Eclipse Temurin JRE with Hotspot {{ version }}+{{ subversion }} (x64)'
     installer: https://github.com/adoptium/temurin{{ major }}-binaries/releases/download/jdk-{{ version }}%2B{{ subversion }}/OpenJDK{{ major }}U-jre_x64_windows_hotspot_{{ version }}_{{ subversion }}.msi
     install_flags: '/qn /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
   {% endfor %}

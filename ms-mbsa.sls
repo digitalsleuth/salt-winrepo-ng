@@ -16,13 +16,14 @@ ms-mbsa:
     {% if grains['cpuarch'] == 'AMD64' %}
     #installer: 'https://download.microsoft.com/download/8/E/1/8E16A4C7-DD28-4368-A83A-282C82FC212A/MBSASetup-x64-EN.msi'
     #uninstaller: 'https://download.microsoft.com/download/8/E/1/8E16A4C7-DD28-4368-A83A-282C82FC212A/MBSASetup-x64-EN.msi'
-    uninstall_flags: '/x {C058FC5D-565F-4360-A562-0527A3D993DC} /qn /norestart'
+    uninstaller: '{C058FC5D-565F-4360-A562-0527A3D993DC}'
+    uninstall_flags: '/qn /norestart'
     {% else %}
     #installer: 'https://download.microsoft.com/download/8/E/1/8E16A4C7-DD28-4368-A83A-282C82FC212A/MBSASetup-x86-EN.msi'
     #uninstaller: 'https://download.microsoft.com/download/8/E/1/8E16A4C7-DD28-4368-A83A-282C82FC212A/MBSASetup-x86-EN.msi'
-    uninstall_flags: '/x {9CB185CC-EDD4-45C5-A4E1-29B766E7B189} /qn /norestart'
+    uninstaller: '{9CB185CC-EDD4-45C5-A4E1-29B766E7B189}'
+    uninstall_flags: '/qn /norestart'
     {% endif %}
-    uninstaller: 'msiexec'
     full_name: 'Microsoft Baseline Security Analyzer 2.3'
     install_flags: '/qn /norestart'
     msiexec: True

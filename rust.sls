@@ -9,14 +9,15 @@ rust-msvc:
   '{{ version }}.0':
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Rust {{ version }} (MSVC 64-bit)'
-    uninstall_flags: '/x {{ guid64 }} /qn /norestart'
+    uninstaller: '{{ guid64 }}'
+    uninstall_flags: '/qn /norestart'
     {% else %}
     full_name: 'Rust {{ version }} (MSVC)'
-    uninstall_flags: '/x {{ guid32 }} /qn /norestart'
+    uninstaller: '{{ guid32 }}'
+    uninstall_flags: '/qn /norestart'
     {% endif %}
     installer:   '{{source_path}}/rust-{{ version }}-{{ arch }}-msvc.msi'
     install_flags:   '/qn /norestart'
-    uninstaller: 'msiexec'
     msiexec: True
     locale: en_US
     reboot: False
@@ -27,14 +28,15 @@ rust-gnu:
   '{{ version }}.0':
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Rust {{ version }} (GNU 64-bit)'
-    uninstall_flags: '/x {{ guid64 }} /qn /norestart'
+    uninstaller: '{{ guid64 }}'
+    uninstall_flags: '/qn /norestart'
     {% else %}
     full_name: 'Rust {{ version }} (GNU)'
-    uninstall_flags: '/x {{ guid32 }} /qn /norestart'
+    uninstaller: '{{ guid32 }}'
+    uninstall_flags: '/qn /norestart'
     {% endif %}
     installer:   '{{source_path}}/rust-{{ version }}-{{ arch }}-msvc.msi'
     install_flags:   '/qn /norestart'
-    uninstaller: 'msiexec'
     msiexec: True
     locale: en_US
     reboot: False

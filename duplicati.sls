@@ -8,14 +8,15 @@ duplicati:
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Duplicati 2'
     installer: 'https://github.com/duplicati/duplicati/releases/download/v{{ version }}-{{ version }}_{{ type }}_{{ date }}/duplicati-{{ version }}_{{ type }}_{{ date }}-x64.msi'
-    uninstall_flags: '/x {{ guid64 }} /qn /norestart'
+    uninstaller: '{{ guid64 }}'
+    uninstall_flags: '/qn /norestart'
     {% else %}
     full_name: 'Duplicati 2'
     installer: 'https://github.com/duplicati/duplicati/releases/download/v{{ version }}-{{ version }}_{{ type }}_{{ date }}/duplicati-{{ version }}_{{ type }}_{{ date }}-x86.msi'
-    uninstall_flags: '/x {{ guid32 }} /qn /norestart'
+    uninstaller: '{{ guid32 }}'
+    uninstall_flags: '/qn /norestart'
     {% endif %}
     install_flags: '/qn ALLUSERS=1 /norestart'
-    uninstaller: 'msiexec'
     msiexec: True
     locale: en_US
     reboot: False
@@ -35,14 +36,15 @@ duplicati:
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Duplicati (x64)'
     #installer: 'https://duplicati.googlecode.com/files/Duplicati%201.3.4.x64.msi'
-    uninstall_flags: '/x {77BA8977-0BA6-4A83-A741-1DFAD23A6B23} /qn /norestart'
+    uninstaller: '{77BA8977-0BA6-4A83-A741-1DFAD23A6B23}'
+    uninstall_flags: '/qn /norestart'
     {% else %}
     full_name: 'Duplicati'
     #installer: 'https://duplicati.googlecode.com/files/Duplicati%201.3.4.msi'
-    uninstall_flags: '/x {73DB7BB3-FA85-4E45-BEC4-FAE8BB1A670A} /qn /norestart'
+    uninstaller: '{73DB7BB3-FA85-4E45-BEC4-FAE8BB1A670A}'
+    uninstall_flags: '/qn /norestart'
     {% endif %}
     #install_flags: '/qn ALLUSERS=1 /norestart'
-    uninstaller: 'msiexec'
     msiexec: True
     locale: en_US
     reboot: False

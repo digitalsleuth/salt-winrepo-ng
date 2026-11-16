@@ -10,8 +10,8 @@ db-browser-sqlite:
     full_name: 'DB Browser for SQLite'
     installer: 'https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v{{ version }}/DB.Browser.for.SQLite-v{{ version }}-win64.msi'
     install_flags: 'SHORTCUT_SQLITE_PROGRAMMENU=1 SHORTCUT_SQLCIPHER_PROGRAMMENU=1 /quiet /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x{{ guid }} /qn /norestart'
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
     msiexec: True
     locale: en_US
     reboot: False

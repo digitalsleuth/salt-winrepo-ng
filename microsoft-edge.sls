@@ -9,9 +9,9 @@ microsoft-edge:
     full_name: 'Microsoft Edge'
     installer: 'https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/{{ guid }}/MicrosoftEdgeEnterpriseX64.msi'
     install_flags: '/qn /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {9658DE46-016C-3C7C-BA34-ADC0DA959790} /qn /norestart'
-    msiexec: False
+    uninstaller: '{9658DE46-016C-3C7C-BA34-ADC0DA959790}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
 {% endfor %}

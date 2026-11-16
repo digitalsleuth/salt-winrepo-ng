@@ -6,9 +6,9 @@ archifiltre-docs:
     full_name: 'Docs par Archifiltre'
     installer: https://github.com/SocialGouv/archifiltre-docs/releases/download/v{{ version }}/archifiltre-docs-win-x64.msi
     install_flags: '/qn /norestart ALLUSERS=1'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/qn /x {{ guid }} /norestart'
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
     locale: en_US
-    msiexec: False
+    msiexec: True
     reboot: False
 {% endfor %}

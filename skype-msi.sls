@@ -13,8 +13,8 @@ skype-msi:
     full_name: 'Skype™ {{ version }}'
     installer: 'https://download.skype.com/s4l/download/win/Skype-{{ full_version }}.msi'
     install_flags: '/qn /norestart STARTSKYPE=FALSE TRANSFORMS=:RemoveDesktopShortcut.mst TRANSFORMS=:RemoveStartup.mst'
-    uninstaller: 'msiexec'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
     msiexec: True
     locale: en_US
     reboot: False
@@ -39,8 +39,8 @@ skype-msi:
     full_name: 'Skype™ {{ version }}'
     #installer: 'https://download.skype.com/msi/SkypeSetup_{{ full_version }}.msi'
     #install_flags: '/qn /norestart STARTSKYPE=FALSE TRANSFORMS=:RemoveDesktopShortcut.mst TRANSFORMS=:RemoveStartup.mst'
-    uninstaller: 'msiexec'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
     msiexec: True
     locale: en_US
     reboot: False  

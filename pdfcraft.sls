@@ -6,8 +6,8 @@ pdfcraft:
     full_name: 'PdfCraft'
     installer: 'https://github.com/storytold/pdfcraft/releases/download/v{{ version }}/pdfcraft-{{ version }}-windows-x64.msi'
     install_flags: '/qn /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
     msiexec: True
     locale: en_US
     reboot: False

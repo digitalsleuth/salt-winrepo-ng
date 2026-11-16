@@ -10,8 +10,8 @@ veracrypt:
     full_name: 'VeraCrypt {{ version }}'
     installer: 'https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_{{ version }}/VeraCrypt_Setup_x64_{{ version }}.msi'
     install_flags: '/qn /norestart ACCEPTLICENSE=YES INSTALLDESKTOPSHORTCUT=""'
-    uninstaller: 'msiexec'
-    uninstall_flags: '/x {{ uninstall }} /qn /norestart'
+    uninstaller: '{{ uninstall }}'
+    uninstall_flags: '/qn /norestart'
     msiexec: True
     locale: en_US
     reboot: False

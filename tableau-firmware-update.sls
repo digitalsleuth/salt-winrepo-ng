@@ -16,10 +16,10 @@ tableau-firmware-update:
     {% else %}
     installer: 'https://digitalintelligence.com/files/setup_tableau_firmware_update_{{ short_ver }}.msi'
     {% endif %}
-    uninstaller: 'msiexec'            
+    uninstaller: '{{ guid }}'            
     install_flags: '/qn /norestart'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
+    uninstall_flags: '/qn /norestart'
     locale: en_US
-    msiexec: False
+    msiexec: True
     reboot: False
 {% endfor %}

@@ -56,9 +56,9 @@ forensic-email-collector:
     full_name: 'Forensic Email Collector'
     installer: https://storage.googleapis.com/fec-downloads/FEC/{{ version }}_{{ folder_hash }}/FECSetup_v{{ version }}.msi
     install_flags: '/qn ACCEPTEULA=1 /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ uninstall_string }} /qn /norestart'
-    msiexec: False
+    uninstaller: '{{ uninstall_string }}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
 {% endfor %}

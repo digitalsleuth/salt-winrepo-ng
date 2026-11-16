@@ -9,6 +9,7 @@ tortoise-hg:
     full_name: 'TortoiseHg 5.7.1 ({{ msi_arch }})'
     installer: 'https://www.mercurial-scm.org/release/tortoisehg/windows/tortoisehg-5.7.1-{{ msi_arch }}.msi'
     uninstaller: 'https://www.mercurial-scm.org/release/tortoisehg/windows/tortoisehg-5.7.1-{{ msi_arch }}.msi'
+    msiexec: True
   '3.6.2':
     full_name: 'TortoiseHg 3.6.2 ({{ msi_arch }})'
     uninstaller: 'salt://win/repo-ng/tortoise-hg/tortoisehg-3.6.2-{{ msi_arch }}.msi'

@@ -6,9 +6,9 @@ fluxengine:
     full_name: 'fluxengine'
     installer: https://github.com/davidgiven/fluxengine/releases/download/dev/fluxengine-X64.msi
     install_flags: '/qn  /norestart'
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
-    msiexec: False
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
   {% endfor %}

@@ -13,7 +13,7 @@ clamav:
     install_flags: '/qn /norestart'
     locale: en_US
     reboot: False
-    msiexec: False
-    uninstaller: 'msiexec.exe'
-    uninstall_flags: '/x {{ guid }} /qn /norestart'
+    msiexec: True
+    uninstaller: '{{ guid }}'
+    uninstall_flags: '/qn /norestart'
   {% endfor %}
