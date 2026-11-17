@@ -8,7 +8,9 @@ tortoise-hg:
   '5.7.1':
     full_name: 'TortoiseHg 5.7.1 ({{ msi_arch }})'
     installer: 'https://www.mercurial-scm.org/release/tortoisehg/windows/tortoisehg-5.7.1-{{ msi_arch }}.msi'
+    install_flags: '/qn /norestart'
     uninstaller: 'https://www.mercurial-scm.org/release/tortoisehg/windows/tortoisehg-5.7.1-{{ msi_arch }}.msi'
+    uninstall_flags: '/qn /norestart'
     msiexec: True
   '3.6.2':
     full_name: 'TortoiseHg 3.6.2 ({{ msi_arch }})'

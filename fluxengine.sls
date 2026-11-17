@@ -1,4 +1,5 @@
-{% set versions = [('26.10.35640','{4C446793-780F-3EF1-A404-BEB56A47C8E7}')] %}
+{% set versions = [('26.11.24131','{4F72BD18-F632-344A-82DF-CC0D5431D72A}'),
+                   ('26.10.35640','{4C446793-780F-3EF1-A404-BEB56A47C8E7}')] %}
 
 fluxengine:
   {% for version, guid in versions %}

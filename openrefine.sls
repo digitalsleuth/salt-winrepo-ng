@@ -1,4 +1,4 @@
-{% set versions = ['3.8.7'] %}
+{% set versions = ['3.10.1','3.8.7'] %}
 {% set PROGRAM_FILES = "%ProgramFiles(x86)%" %}
 
 openrefine:

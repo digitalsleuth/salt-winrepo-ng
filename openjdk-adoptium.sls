@@ -1,4 +1,5 @@
-{% set versions = [('21.0.5','11','{0D9BC332-ECE1-4389-98E8-4C32F04B44D9}')] %}
+{% set versions = [('21.0.13','9',''),
+                   ('21.0.5','11','{0D9BC332-ECE1-4389-98E8-4C32F04B44D9}')] %}
 
 openjdk-adoptium:
   {% for version, subversion, guid in versions %}
